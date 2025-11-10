@@ -3,29 +3,100 @@ package com.example.restrosuite.service;
 import com.example.restrosuite.entity.Bill;
 import com.example.restrosuite.entity.Order;
 import com.example.restrosuite.entity.OrderItem;
+import com.example.restrosuite.repository.BillRepository;
+import com.example.restrosuite.repository.OrderRepository;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class InvoiceService {
 
+    @Autowired
+    private OrderRepository orderRepository;
+    
+    @Autowired
+    private BillRepository billRepository;
+
     public String generateTextInvoice(Bill bill) {
-        Order order = bill.getOrder();
+        Order primaryOrder = bill.getOrder();
         StringBuilder invoice = new StringBuilder();
+        
+        // Get all orders for combined bills
+        List<Order> allOrders = new ArrayList<>();
+        List<OrderItem> allItems = new ArrayList<>();
+        
+        if (primaryOrder != null && primaryOrder.getTable() != null) {
+            // Check if this is a combined bill
+            if ("COMBINED_BILL".equals(bill.getPaymentStatus())) {
+                // Get all completed orders for this table that have COMBINED status bills
+                // These are the orders that are part of this combined bill
+                List<Order> tableOrders = orderRepository.findCompletedOrdersByTableId(primaryOrder.getTable().getId());
+                // Filter to get orders that have COMBINED status bills (reference bills)
+                // These are orders created after the last bill and included in this bill
+                allOrders = tableOrders.stream()
+                    .filter(order -> {
+                        Optional<Bill> orderBill = billRepository.findByOrderId(order.getId());
+                        if (orderBill.isPresent() && "COMBINED".equals(orderBill.get().getPaymentStatus())) {
+                            // Check if this order's bill was generated around the same time as the combined bill
+                            // (within 1 minute to account for processing time)
+                            long timeDiff = Math.abs(java.time.Duration.between(
+                                orderBill.get().getGeneratedAt(), 
+                                bill.getGeneratedAt()
+                            ).toMinutes());
+                            return timeDiff <= 1; // Orders billed within 1 minute are part of this combined bill
+                        }
+                        return false;
+                    })
+                    .collect(java.util.stream.Collectors.toList());
+                // Also include the primary order
+                if (!allOrders.contains(primaryOrder)) {
+                    allOrders.add(0, primaryOrder);
+                }
+            } else {
+                allOrders.add(primaryOrder);
+            }
+            
+            // Collect all items from all orders
+            for (Order order : allOrders) {
+                if (order.getItems() != null) {
+                    allItems.addAll(order.getItems());
+                }
+            }
+        } else {
+            // Fallback to single order
+            if (primaryOrder != null && primaryOrder.getItems() != null) {
+                allItems.addAll(primaryOrder.getItems());
+            }
+        }
         
         invoice.append("========================================\n");
         invoice.append("          RESTAURANT INVOICE\n");
         invoice.append("========================================\n\n");
         
         invoice.append("Invoice ID: ").append(bill.getId()).append("\n");
-        invoice.append("Order ID: ").append(order.getId()).append("\n");
-        invoice.append("Table: ").append(order.getTable() != null ? order.getTable().getTableNumber() : "N/A").append("\n");
+        if (allOrders.size() > 1) {
+            invoice.append("Orders: ").append(allOrders.size()).append(" orders combined\n");
+            invoice.append("Order IDs: ");
+            for (int i = 0; i < allOrders.size(); i++) {
+                if (i > 0) invoice.append(", ");
+                invoice.append(allOrders.get(i).getId().toString().substring(0, 8));
+            }
+            invoice.append("\n");
+        } else if (primaryOrder != null) {
+            invoice.append("Order ID: ").append(primaryOrder.getId()).append("\n");
+        }
+        invoice.append("Table: ").append(primaryOrder != null && primaryOrder.getTable() != null ? primaryOrder.getTable().getTableNumber() : "N/A").append("\n");
         invoice.append("Date: ").append(bill.getGeneratedAt().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))).append("\n");
         
         // GST Details
@@ -46,13 +117,34 @@ public class InvoiceService {
         invoice.append(String.format("%-20s %6s %5s %10s %10s\n", "Item", "HSN", "Qty", "Rate", "Amount"));
         invoice.append("----------------------------------------\n");
         
-        for (OrderItem item : order.getItems()) {
+        // Group items by menu item and sum quantities
+        java.util.Map<UUID, OrderItem> itemMap = new java.util.HashMap<>();
+        for (OrderItem item : allItems) {
+            UUID menuItemId = item.getMenuItem().getId();
+            if (itemMap.containsKey(menuItemId)) {
+                OrderItem existing = itemMap.get(menuItemId);
+                existing.setQuantity(existing.getQuantity() + item.getQuantity());
+                existing.setPrice(existing.getPrice() + item.getPrice());
+            } else {
+                // Create a copy to avoid modifying the original
+                OrderItem copy = OrderItem.builder()
+                    .menuItem(item.getMenuItem())
+                    .quantity(item.getQuantity())
+                    .price(item.getPrice())
+                    .build();
+                itemMap.put(menuItemId, copy);
+            }
+        }
+        
+        // Display all items
+        for (OrderItem item : itemMap.values()) {
             String hsnCode = item.getMenuItem().getHsnCode() != null ? item.getMenuItem().getHsnCode() : "N/A";
+            double unitPrice = item.getMenuItem().getPrice();
             invoice.append(String.format("%-20s %6s %5d %10.2f %10.2f\n",
                 item.getMenuItem().getName(),
                 hsnCode,
                 item.getQuantity(),
-                item.getMenuItem().getPrice(),
+                unitPrice,
                 item.getPrice()));
         }
         
@@ -88,7 +180,64 @@ public class InvoiceService {
     }
 
     public byte[] generateInvoicePdf(Bill bill) throws Exception {
-        Order order = bill.getOrder();
+        Order primaryOrder = bill.getOrder();
+        
+        // Get all orders for combined bills
+        List<Order> allOrders = new ArrayList<>();
+        List<OrderItem> allItems = new ArrayList<>();
+        
+        if (primaryOrder != null && primaryOrder.getTable() != null) {
+            if ("COMBINED_BILL".equals(bill.getPaymentStatus())) {
+                List<Order> tableOrders = orderRepository.findCompletedOrdersByTableId(primaryOrder.getTable().getId());
+                allOrders = tableOrders.stream()
+                    .filter(order -> {
+                        Optional<Bill> orderBill = billRepository.findByOrderId(order.getId());
+                        if (orderBill.isPresent() && "COMBINED".equals(orderBill.get().getPaymentStatus())) {
+                            // Check if this order's bill was generated around the same time as the combined bill
+                            long timeDiff = Math.abs(java.time.Duration.between(
+                                orderBill.get().getGeneratedAt(), 
+                                bill.getGeneratedAt()
+                            ).toMinutes());
+                            return timeDiff <= 1; // Orders billed within 1 minute are part of this combined bill
+                        }
+                        return false;
+                    })
+                    .collect(java.util.stream.Collectors.toList());
+                if (!allOrders.contains(primaryOrder)) {
+                    allOrders.add(0, primaryOrder);
+                }
+            } else {
+                allOrders.add(primaryOrder);
+            }
+            
+            for (Order order : allOrders) {
+                if (order.getItems() != null) {
+                    allItems.addAll(order.getItems());
+                }
+            }
+        } else {
+            if (primaryOrder != null && primaryOrder.getItems() != null) {
+                allItems.addAll(primaryOrder.getItems());
+            }
+        }
+        
+        // Group items by menu item
+        java.util.Map<UUID, OrderItem> itemMap = new java.util.HashMap<>();
+        for (OrderItem item : allItems) {
+            UUID menuItemId = item.getMenuItem().getId();
+            if (itemMap.containsKey(menuItemId)) {
+                OrderItem existing = itemMap.get(menuItemId);
+                existing.setQuantity(existing.getQuantity() + item.getQuantity());
+                existing.setPrice(existing.getPrice() + item.getPrice());
+            } else {
+                OrderItem copy = OrderItem.builder()
+                    .menuItem(item.getMenuItem())
+                    .quantity(item.getQuantity())
+                    .price(item.getPrice())
+                    .build();
+                itemMap.put(menuItemId, copy);
+            }
+        }
         
         try (PDDocument doc = new PDDocument();
              ByteArrayOutputStream out = new ByteArrayOutputStream()) {
@@ -118,10 +267,16 @@ public class InvoiceService {
                 cs.showText("Invoice ID: " + bill.getId());
                 yPosition -= lineHeight;
                 cs.newLineAtOffset(0, -lineHeight);
-                cs.showText("Order ID: " + order.getId());
-                yPosition -= lineHeight;
-                cs.newLineAtOffset(0, -lineHeight);
-                cs.showText("Table: " + (order.getTable() != null ? order.getTable().getTableNumber() : "N/A"));
+                if (allOrders.size() > 1) {
+                    cs.showText("Orders: " + allOrders.size() + " orders combined");
+                    yPosition -= lineHeight;
+                    cs.newLineAtOffset(0, -lineHeight);
+                } else if (primaryOrder != null) {
+                    cs.showText("Order ID: " + primaryOrder.getId());
+                    yPosition -= lineHeight;
+                    cs.newLineAtOffset(0, -lineHeight);
+                }
+                cs.showText("Table: " + (primaryOrder != null && primaryOrder.getTable() != null ? primaryOrder.getTable().getTableNumber() : "N/A"));
                 yPosition -= lineHeight;
                 cs.newLineAtOffset(0, -lineHeight);
                 cs.showText("Date: " + bill.getGeneratedAt().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
@@ -153,8 +308,8 @@ public class InvoiceService {
                 cs.setFont(PDType1Font.HELVETICA, 10);
                 cs.newLineAtOffset(leftMargin, yPosition);
                 
-                if (order.getItems() != null) {
-                    for (OrderItem item : order.getItems()) {
+                if (!itemMap.isEmpty()) {
+                    for (OrderItem item : itemMap.values()) {
                         if (yPosition < 100) {
                             // Need new page
                             cs.endText();

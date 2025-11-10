@@ -32,6 +32,9 @@ public class CustomerOrderController {
     private OutletRepository outletRepository;
 
     @Autowired
+    private BillRepository billRepository;
+
+    @Autowired
     private SimpMessagingTemplate messagingTemplate;
 
     /**
@@ -56,7 +59,7 @@ public class CustomerOrderController {
             TableEntity table = tableRepository.findById(tableId)
                     .orElseThrow(() -> new RuntimeException("Table not found"));
             
-            // Check for existing active order
+            // Check for existing active order (CREATED or IN_PROGRESS only)
             java.util.Optional<Order> existingOrder = orderRepository.findLatestActiveOrderByTableId(tableId);
             
             Map<String, Object> response = new HashMap<>();
@@ -74,6 +77,29 @@ public class CustomerOrderController {
                 orderInfo.put("createdAt", order.getCreatedAt());
                 orderInfo.put("items", order.getItems());
                 response.put("activeOrder", orderInfo);
+            } else {
+                // Check if there are completed orders that don't have bills yet
+                // Only show completed orders message if bills haven't been generated
+                List<Order> completedOrders = orderRepository.findCompletedOrdersByTableId(tableId);
+                if (!completedOrders.isEmpty()) {
+                    // Check if any of these completed orders have bills
+                    // If all completed orders have bills, don't show the message
+                    boolean hasUnbilledOrders = false;
+                    for (Order order : completedOrders) {
+                        java.util.Optional<Bill> bill = billRepository.findByOrderId(order.getId());
+                        if (bill.isEmpty()) {
+                            // No bill found for this order
+                            hasUnbilledOrders = true;
+                            break;
+                        }
+                    }
+                    
+                    // Only show message if there are completed orders without bills
+                    if (hasUnbilledOrders) {
+                        response.put("hasCompletedOrders", true);
+                        response.put("completedOrdersCount", completedOrders.size());
+                    }
+                }
             }
             
             return ResponseEntity.ok(response);
@@ -113,7 +139,33 @@ public class CustomerOrderController {
                 // Add items to existing order
                 order = existingOrderOpt.get();
             } else {
-                // Create new order
+                // Before creating a new order, check if there are unbilled completed orders
+                // Session should remain active until bills are generated
+                List<Order> completedOrders = orderRepository.findCompletedOrdersByTableId(tableId);
+                boolean hasUnbilledOrders = false;
+                for (Order completedOrder : completedOrders) {
+                    java.util.Optional<Bill> bill = billRepository.findByOrderId(completedOrder.getId());
+                    if (bill.isEmpty()) {
+                        hasUnbilledOrders = true;
+                        break;
+                    }
+                }
+                
+                if (hasUnbilledOrders) {
+                    // Cannot create new order - previous session's bills not generated yet
+                    Map<String, Object> error = new HashMap<>();
+                    error.put("error", "Cannot create new order. Please wait for the previous orders to be billed first.");
+                    error.put("hasUnbilledOrders", true);
+                    return ResponseEntity.status(400).body(error);
+                }
+                
+                // Ensure table is marked as occupied (in case it was manually changed)
+                if (!table.isOccupied()) {
+                    table.setOccupied(true);
+                    tableRepository.save(table);
+                }
+                
+                // Create new order - only allowed if all previous orders are billed
                 Outlet outlet = table.getOutlet();
                 order = Order.builder()
                         .table(table)

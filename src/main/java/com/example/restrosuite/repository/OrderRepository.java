@@ -27,5 +27,9 @@ public interface OrderRepository extends JpaRepository<Order, UUID> {
     // Find the most recent active order for a table
     @Query(value = "SELECT * FROM orders WHERE table_id = :tableId AND status IN ('CREATED', 'IN_PROGRESS') ORDER BY created_at DESC LIMIT 1", nativeQuery = true)
     java.util.Optional<Order> findLatestActiveOrderByTableId(UUID tableId);
+    
+    // Find all completed orders for a table that don't have bills yet
+    @Query("SELECT o FROM Order o WHERE o.table.id = :tableId AND o.status = 'COMPLETED' ORDER BY o.createdAt ASC")
+    List<Order> findCompletedOrdersByTableId(UUID tableId);
 }
 
