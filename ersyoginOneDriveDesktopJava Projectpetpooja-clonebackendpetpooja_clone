@@ -1,0 +1,15 @@
+* [33m346a7d7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Remove .env.example file and update application logs: Deleted the example environment co
+[31m|[m * [33m3a0510f[m[33m ([m[1;32mfeature/cognito-env-clean[m[33m)[m Remove .env.example file and update logs with detailed error messages related to JWT authentication failures and application startup issues. Address unresolved compilation problems in JwtAuthFilter due to missing dependencies.
+[31m|[m[31m/[m  
+* [33mb1cb984[m Update application logging and initialization sequence: Enhanced log output during application startup, including database table status checks and graceful shutdown processes. Added warnings for JWT_SECRET and Hibernate dialect configuration. Improved logging for JPA EntityManagerFactory initialization and Spring Data repository scanning.
+[32m|[m * [33m38a1049[m[33m ([m[1;32mfeature/env-configuration[m[33m)[m Update application properties to enhance security: Removed hardcoded AWS credentials and emphasized the use of environment variables. Updated logging in petpooja-clone.log to reflect application startup and database initialization processes.
+[32m|[m[32m/[m  
+* [33ma3fb9af[m Add dotenv support for environment variable management: Integrated dotenv-java to load environment variables from a .env file, enhancing configuration flexibility. Updated application properties to reflect this change and ensure defaults are used when .env is absent.
+* [33m64a8004[m Remove hardcoded AWS credentials from application.properties - use environment variables instead
+[33m|[m *   [33m5215720[m[33m ([m[1;35mrefs/stash[m[33m)[m WIP on main: 71842fa Remove hardcoded AWS credentials from application.properties - use environment variables instead
+[33m|[m [34m|[m[35m\[m  
+[33m|[m [34m|[m * [33m205826b[m index on main: 71842fa Remove hardcoded AWS credentials from application.properties - use environment variables instead
+[33m|[m [34m|[m[34m/[m  
+[33m|[m * [33m71842fa[m Remove hardcoded AWS credentials from application.properties - use environment variables instead
+[33m|[m[33m/[m  
+* [33mcc6d755[m Add AWS Cognito integration: Introduced dependencies for AWS SDK and JWT validation, updated SecurityConfig to allow access to Cognito-related endpoints, and enhanced AuthController for user management with Cognito. Updated application properties for Cognito configuration.

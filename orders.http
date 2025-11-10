@@ -1,0 +1,132 @@
+### ============================================
+### SPRINT 3 - POS CORE SYSTEM TESTING
+### ============================================
+
+### 1️⃣ Add a Menu Item
+POST http://localhost:8080/api/menu
+Content-Type: application/json
+
+{
+  "name": "Paneer Butter Masala",
+  "category": "Main Course",
+  "price": 250
+}
+
+### 2️⃣ Add another Menu Item
+POST http://localhost:8080/api/menu
+Content-Type: application/json
+
+{
+  "name": "Chicken Biryani",
+  "category": "Main Course",
+  "price": 300
+}
+
+### 3️⃣ Add a Dessert
+POST http://localhost:8080/api/menu
+Content-Type: application/json
+
+{
+  "name": "Gulab Jamun",
+  "category": "Dessert",
+  "price": 80
+}
+
+### 4️⃣ Get All Menu Items
+GET http://localhost:8080/api/menu
+
+### 5️⃣ Add a Table
+POST http://localhost:8080/api/tables
+Content-Type: application/json
+
+{
+  "tableNumber": "T1",
+  "occupied": false
+}
+
+### 6️⃣ Add another Table
+POST http://localhost:8080/api/tables
+Content-Type: application/json
+
+{
+  "tableNumber": "T2",
+  "occupied": false
+}
+
+### 7️⃣ Get All Tables
+GET http://localhost:8080/api/tables
+
+### 8️⃣ Create Order
+### NOTE: Replace the UUIDs below with actual UUIDs from the responses above
+POST http://localhost:8080/api/orders/create
+Content-Type: application/json
+
+{
+  "tableId": "PUT_UUID_OF_TABLE_HERE",
+  "items": [
+    {
+      "menuItemId": "PUT_UUID_OF_MENU_ITEM_HERE",
+      "quantity": 2
+    }
+  ]
+}
+
+### 9️⃣ Create Order with Multiple Items
+### NOTE: Replace the UUIDs below with actual UUIDs from the responses above
+POST http://localhost:8080/api/orders/create
+Content-Type: application/json
+
+{
+  "tableId": "PUT_UUID_OF_TABLE_HERE",
+  "items": [
+    {
+      "menuItemId": "PUT_UUID_OF_MENU_ITEM_1_HERE",
+      "quantity": 2
+    },
+    {
+      "menuItemId": "PUT_UUID_OF_MENU_ITEM_2_HERE",
+      "quantity": 1
+    }
+  ]
+}
+
+### 🔟 Get All Orders
+GET http://localhost:8080/api/orders
+
+### 1️⃣1️⃣ Update Order Status
+### NOTE: Replace the UUID below with actual order UUID
+PUT http://localhost:8080/api/orders/PUT_ORDER_UUID_HERE/status?status=IN_PROGRESS
+
+### 1️⃣2️⃣ Update Order Status to COMPLETED
+PUT http://localhost:8080/api/orders/PUT_ORDER_UUID_HERE/status?status=COMPLETED
+
+### 1️⃣3️⃣ Update Menu Item
+### NOTE: Replace the UUID below with actual menu item UUID
+PUT http://localhost:8080/api/menu/PUT_MENU_ITEM_UUID_HERE
+Content-Type: application/json
+
+{
+  "name": "Paneer Butter Masala (Updated)",
+  "category": "Main Course",
+  "price": 280,
+  "available": true
+}
+
+### 1️⃣4️⃣ Update Table Status
+### NOTE: Replace the UUID below with actual table UUID
+PUT http://localhost:8080/api/tables/PUT_TABLE_UUID_HERE
+Content-Type: application/json
+
+{
+  "tableNumber": "T1",
+  "occupied": true
+}
+
+### 1️⃣5️⃣ Delete Menu Item
+### NOTE: Replace the UUID below with actual menu item UUID
+DELETE http://localhost:8080/api/menu/PUT_MENU_ITEM_UUID_HERE
+
+### 1️⃣6️⃣ Delete Table
+### NOTE: Replace the UUID below with actual table UUID
+DELETE http://localhost:8080/api/tables/PUT_TABLE_UUID_HERE
+

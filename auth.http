@@ -1,0 +1,80 @@
+### 1️⃣ Register
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "AdminUser",
+  "email": "admin@test.com",
+  "password": "1234",
+  "role": "ADMIN"
+}
+
+### 2️⃣ Login
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "1234"
+}
+
+### 3️⃣ Register another user (MANAGER)
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "ManagerUser",
+  "email": "manager@test.com",
+  "password": "1234",
+  "role": "MANAGER"
+}
+
+### 4️⃣ Login as MANAGER
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "manager@test.com",
+  "password": "1234"
+}
+
+### 5️⃣ Register CASHIER user
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "CashierUser",
+  "email": "cashier@test.com",
+  "password": "1234",
+  "role": "CASHIER"
+}
+
+### 6️⃣ Login as CASHIER
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "cashier@test.com",
+  "password": "1234"
+}
+
+### 7️⃣ Test invalid credentials
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "wrongpassword"
+}
+
+### 8️⃣ Test duplicate email registration
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "AnotherUser",
+  "email": "admin@test.com",
+  "password": "1234",
+  "role": "ADMIN"
+}
+

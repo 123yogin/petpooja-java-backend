@@ -1,0 +1,73 @@
+### ============================================
+### SPRINT 4 - BILLING API TESTING
+### ============================================
+
+### 1️⃣ Update order to COMPLETED (requires KITCHEN or ADMIN role)
+### NOTE: Replace the UUID below with actual order UUID
+### NOTE: Replace the token below with a valid JWT token (KITCHEN or ADMIN role)
+PUT http://localhost:8080/api/orders/040103df-b737-47d7-a17d-f8d3586391bf/status?status=COMPLETED
+Authorization: Bearer <token-of-kitchen-or-admin>
+
+### 2️⃣ Generate Bill (requires CASHIER or ADMIN role)
+### NOTE: Replace the UUID below with actual order UUID
+### NOTE: Replace the token below with a valid JWT token (CASHIER or ADMIN role)
+POST http://localhost:8080/api/billing/generate/040103df-b737-47d7-a17d-f8d3586391bf
+Authorization: Bearer <token-of-cashier-or-admin>
+
+### 3️⃣ View Bill
+### NOTE: Replace the UUID below with actual bill UUID from step 2
+### NOTE: Replace the token below with a valid JWT token
+GET http://localhost:8080/api/billing/PUT_BILL_UUID_HERE
+Authorization: Bearer <token>
+
+### 4️⃣ Get Invoice Text
+### NOTE: Replace the UUID below with actual bill UUID
+### NOTE: Replace the token below with a valid JWT token
+GET http://localhost:8080/api/billing/PUT_BILL_UUID_HERE/invoice
+Authorization: Bearer <token>
+
+### ============================================
+### ROLE-BASED ACCESS TESTING
+### ============================================
+
+### Test 1: Try to create order as CASHIER (should work)
+POST http://localhost:8080/api/orders/create
+Content-Type: application/json
+Authorization: Bearer <cashier-token>
+
+{
+  "tableId": "PUT_UUID_OF_TABLE_HERE",
+  "items": [
+    {
+      "menuItemId": "PUT_UUID_OF_MENU_ITEM_HERE",
+      "quantity": 2
+    }
+  ]
+}
+
+### Test 2: Try to update order status as KITCHEN (should work)
+PUT http://localhost:8080/api/orders/PUT_ORDER_UUID_HERE/status?status=IN_PROGRESS
+Authorization: Bearer <kitchen-token>
+
+### Test 3: Try to access menu as ADMIN (should work)
+GET http://localhost:8080/api/menu
+Authorization: Bearer <admin-token>
+
+### Test 4: Try to access menu as CASHIER (should fail - 403 Forbidden)
+GET http://localhost:8080/api/menu
+Authorization: Bearer <cashier-token>
+
+### Test 5: Try to create order without token (should fail - 401 Unauthorized)
+POST http://localhost:8080/api/orders/create
+Content-Type: application/json
+
+{
+  "tableId": "PUT_UUID_OF_TABLE_HERE",
+  "items": [
+    {
+      "menuItemId": "PUT_UUID_OF_MENU_ITEM_HERE",
+      "quantity": 2
+    }
+  ]
+}
+
