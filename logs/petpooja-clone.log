@@ -12941,3 +12941,1115 @@ This generated password is for development use only. Your security configuration
 2025-11-10 01:23:06.357 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
 2025-11-10 01:23:06.366 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2025-11-10 01:23:13.502 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-10 09:42:07.290 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 8484 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:42:07.292 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:42:07.343 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-10 09:42:07.343 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-10 09:42:08.433 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:42:08.536 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:42:09.237 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:42:09.248 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:42:09.248 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:42:09.302 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:42:09.302 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1955 ms
+2025-11-10 09:42:09.409 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:42:09.431 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito is disabled, skipping JWT processor initialization
+2025-11-10 09:42:09.494 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine suitable jdbc url
+2025-11-10 09:42:09.497 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-11-10 09:42:09.516 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-10 09:42:09.540 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine suitable jdbc url
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-11-10 09:43:19.465 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 25792 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:43:19.467 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:43:19.511 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-10 09:43:19.511 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-10 09:43:20.145 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.petpooja_clone.PetpoojaCloneApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+2025-11-10 09:43:20.162 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-10 09:43:20.180 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.petpooja_clone.PetpoojaCloneApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:627)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:850)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:847)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:817)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.petpooja_clone.PetpoojaCloneApplication.main(PetpoojaCloneApplication.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:99)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:247)
+	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:427)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:308)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:617)
+	... 21 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'SERVER_PORT' in value "${SERVER_PORT}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:298)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:131)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:293)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:264)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:284)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:81)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:67)
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:566)
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.getPortProperty(ManagementPortType.java:64)
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.get(ManagementPortType.java:58)
+	at org.springframework.boot.actuate.autoconfigure.web.server.OnManagementPortCondition.getMatchOutcome(OnManagementPortCondition.java:49)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 27 common frames omitted
+2025-11-10 09:46:05.258 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:46:05.260 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:46:05.306 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-10 09:46:05.306 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-10 09:46:06.156 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:46:06.239 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:46:06.739 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:46:06.756 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:46:06.756 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:46:06.839 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:46:06.839 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1532 ms
+2025-11-10 09:46:06.949 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:46:06.956 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
+2025-11-10 09:46:07.017 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-10 09:46:07.722 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-10 09:46:07.793 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-10 09:46:08.139 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@176baee2
+2025-11-10 09:46:08.139 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-10 09:46:08.255 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 09:46:09.988 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:46:10.405 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-10 09:46:11.189 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 09:46:11.240 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: da58f448-6d6c-4230-95ed-8de6db64f46f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-10 09:46:11.258 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-10 09:46:11.622 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-10 09:46:12.005 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-10 09:46:12.088 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-10 09:46:12.088 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3eb5d048]]
+2025-11-10 09:46:12.089 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-10 09:46:12.105 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-10 09:46:12.124 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Started PetpoojaCloneApplication in 7.351 seconds (process running for 7.762)
+2025-11-10 09:46:12.322 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:46:12.322 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:46:12.322 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-10 09:46:12.322 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:46:12.324 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:46:12.338 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:46:12.441 [restartedMain] INFO  c.e.p.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-10 09:46:12.441 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-10 09:46:12.441 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-10 09:46:12.441 [restartedMain] INFO  c.e.p.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-10 09:46:12.441 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-10 09:46:12.441 [restartedMain] INFO  c.e.p.service.SeedDataService - 📋 Seeding tasks...
+2025-11-10 09:46:12.456 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-10 09:46:12.457 [restartedMain] INFO  c.e.p.service.SeedDataService - 👔 Seeding employees...
+2025-11-10 09:46:12.461 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-10 09:46:12.462 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-10 09:46:12.465 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-10 09:46:23.988 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-10 09:48:06.342 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-10 09:48:06.348 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-10 09:48:06.360 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-10 09:48:06.366 [Thread-5] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-10 09:48:06.367 [Thread-5] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3eb5d048]]
+2025-11-10 09:48:06.367 [Thread-5] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-10 09:48:06.378 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:48:06.383 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-10 09:48:06.388 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-10 09:48:06.546 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:48:06.547 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:48:06.837 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:48:06.869 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:48:06.956 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:48:06.957 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:48:06.957 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:48:06.973 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:48:06.974 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 424 ms
+2025-11-10 09:48:07.004 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:48:07.008 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
+2025-11-10 09:48:07.010 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-10 09:48:07.054 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-10 09:48:07.059 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-10 09:48:07.246 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@73c5b359
+2025-11-10 09:48:07.247 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-10 09:48:07.260 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 09:48:07.740 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:48:08.004 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 09:48:08.011 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 644ab33a-f20d-43a5-abde-a608a5cd41f5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-10 09:48:08.013 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-10 09:48:08.088 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-10 09:48:08.180 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-10 09:48:08.191 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-10 09:48:08.191 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@13aee1a2]]
+2025-11-10 09:48:08.191 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-10 09:48:08.195 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-10 09:48:08.203 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Started PetpoojaCloneApplication in 1.694 seconds (process running for 123.841)
+2025-11-10 09:48:08.205 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:48:08.206 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:48:08.206 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-10 09:48:08.206 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:48:08.209 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-10 09:48:08.211 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-10 09:48:08.211 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-10 09:48:08.211 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-10 09:48:08.211 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-10 09:48:08.212 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-10 09:48:08.212 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-10 09:48:08.212 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-10 09:48:08.212 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-10 09:48:08.212 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-10 09:48:08.212 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-10 09:48:08.212 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-10 09:48:08.212 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:48:08.213 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-10 09:48:08.213 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-10 09:48:08.213 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:48:08.213 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:48:08.218 [restartedMain] INFO  c.e.p.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-10 09:48:08.219 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-10 09:48:08.221 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-10 09:48:08.221 [restartedMain] INFO  c.e.p.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-10 09:48:08.224 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-10 09:48:08.225 [restartedMain] INFO  c.e.p.service.SeedDataService - 📋 Seeding tasks...
+2025-11-10 09:48:08.230 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-10 09:48:08.230 [restartedMain] INFO  c.e.p.service.SeedDataService - 👔 Seeding employees...
+2025-11-10 09:48:08.233 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-10 09:48:08.234 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-10 09:48:08.237 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-10 09:48:08.241 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-10 09:48:09.625 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-10 09:48:10.780 [http-nio-8080-exec-8] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:10.781 [http-nio-8080-exec-8] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/menu
+2025-11-10 09:48:10.847 [http-nio-8080-exec-8] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/menu
+2025-11-10 09:48:10.848 [http-nio-8080-exec-8] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/menu - Error: Custom JWT token validation failed
+2025-11-10 09:48:11.296 [http-nio-8080-exec-4] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:11.296 [http-nio-8080-exec-4] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/analytics/recent-orders
+2025-11-10 09:48:11.302 [http-nio-8080-exec-4] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/analytics/recent-orders
+2025-11-10 09:48:11.303 [http-nio-8080-exec-4] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/analytics/recent-orders - Error: Custom JWT token validation failed
+2025-11-10 09:48:11.801 [http-nio-8080-exec-6] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:11.802 [http-nio-8080-exec-6] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/analytics/sales-trends
+2025-11-10 09:48:11.806 [http-nio-8080-exec-6] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/analytics/sales-trends
+2025-11-10 09:48:11.806 [http-nio-8080-exec-6] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/analytics/sales-trends - Error: Custom JWT token validation failed
+2025-11-10 09:48:12.314 [http-nio-8080-exec-1] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:12.315 [http-nio-8080-exec-1] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/tables
+2025-11-10 09:48:12.318 [http-nio-8080-exec-1] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/tables
+2025-11-10 09:48:12.319 [http-nio-8080-exec-1] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/tables - Error: Custom JWT token validation failed
+2025-11-10 09:48:12.816 [http-nio-8080-exec-10] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:12.817 [http-nio-8080-exec-10] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/analytics/sales-summary
+2025-11-10 09:48:12.820 [http-nio-8080-exec-10] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/analytics/sales-summary
+2025-11-10 09:48:12.821 [http-nio-8080-exec-10] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/analytics/sales-summary - Error: Custom JWT token validation failed
+2025-11-10 09:48:13.334 [http-nio-8080-exec-9] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:13.335 [http-nio-8080-exec-9] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/orders
+2025-11-10 09:48:13.337 [http-nio-8080-exec-9] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/orders
+2025-11-10 09:48:13.338 [http-nio-8080-exec-9] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/orders - Error: Custom JWT token validation failed
+2025-11-10 09:48:13.839 [http-nio-8080-exec-3] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:13.840 [http-nio-8080-exec-3] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/analytics/low-stock
+2025-11-10 09:48:13.843 [http-nio-8080-exec-3] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/analytics/low-stock
+2025-11-10 09:48:13.844 [http-nio-8080-exec-3] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/analytics/low-stock - Error: Custom JWT token validation failed
+2025-11-10 09:48:40.167 [http-nio-8080-exec-6] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:40.171 [http-nio-8080-exec-6] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/orders
+2025-11-10 09:48:40.175 [http-nio-8080-exec-6] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/orders
+2025-11-10 09:48:40.176 [http-nio-8080-exec-6] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/orders - Error: Custom JWT token validation failed
+2025-11-10 09:48:40.684 [http-nio-8080-exec-2] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:40.686 [http-nio-8080-exec-2] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/analytics/recent-orders
+2025-11-10 09:48:40.688 [http-nio-8080-exec-2] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/analytics/recent-orders
+2025-11-10 09:48:40.688 [http-nio-8080-exec-2] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/analytics/recent-orders - Error: Custom JWT token validation failed
+2025-11-10 09:48:42.739 [http-nio-8080-exec-3] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:42.739 [http-nio-8080-exec-3] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/analytics/sales-trends
+2025-11-10 09:48:42.743 [http-nio-8080-exec-3] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/analytics/sales-trends
+2025-11-10 09:48:42.743 [http-nio-8080-exec-3] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/analytics/sales-trends - Error: Custom JWT token validation failed
+2025-11-10 09:48:43.254 [http-nio-8080-exec-9] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:43.255 [http-nio-8080-exec-9] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/menu
+2025-11-10 09:48:43.255 [http-nio-8080-exec-9] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/menu
+2025-11-10 09:48:43.255 [http-nio-8080-exec-9] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/menu - Error: Custom JWT token validation failed
+2025-11-10 09:48:43.771 [http-nio-8080-exec-10] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:43.771 [http-nio-8080-exec-10] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/analytics/sales-summary
+2025-11-10 09:48:43.771 [http-nio-8080-exec-10] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/analytics/sales-summary
+2025-11-10 09:48:43.771 [http-nio-8080-exec-10] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/analytics/sales-summary - Error: Custom JWT token validation failed
+2025-11-10 09:48:44.273 [http-nio-8080-exec-1] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:44.274 [http-nio-8080-exec-1] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/tables
+2025-11-10 09:48:44.274 [http-nio-8080-exec-1] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/tables
+2025-11-10 09:48:44.274 [http-nio-8080-exec-1] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/tables - Error: Custom JWT token validation failed
+2025-11-10 09:48:44.782 [http-nio-8080-exec-8] ERROR c.e.p.security.CognitoTokenValidator - JOSE exception while validating token: Couldn't retrieve remote JWK set: Connect timed out
+2025-11-10 09:48:44.785 [http-nio-8080-exec-8] WARN  c.e.p.security.JwtAuthFilter - Cognito token validation failed for request: /api/analytics/low-stock
+2025-11-10 09:48:44.788 [http-nio-8080-exec-8] WARN  c.e.p.security.JwtAuthFilter - Custom JWT token validation failed for request: /api/analytics/low-stock
+2025-11-10 09:48:44.788 [http-nio-8080-exec-8] WARN  c.e.p.security.JwtAuthFilter - Token validation failed for request: /api/analytics/low-stock - Error: Custom JWT token validation failed
+2025-11-10 09:53:44.838 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-11-10 09:53:44.838 [Thread-9] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-10 09:53:44.855 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-10 09:53:44.855 [Thread-9] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-10 09:53:44.855 [Thread-9] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@13aee1a2]]
+2025-11-10 09:53:44.871 [Thread-9] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-10 09:53:44.871 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:53:44.871 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-10 09:53:44.871 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-10 09:53:45.071 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:53:45.071 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:53:45.921 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:53:46.022 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:53:46.355 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:53:46.355 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:53:46.355 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:53:46.422 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:53:46.422 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1351 ms
+2025-11-10 09:53:46.539 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:53:46.539 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
+2025-11-10 09:53:46.539 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-10 09:53:46.738 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-10 09:53:46.754 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-11-10 09:53:46.838 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@3c078137
+2025-11-10 09:53:46.838 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-11-10 09:53:46.855 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 09:53:47.888 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:53:48.805 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 09:53:48.855 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8371acc5-b990-46a8-9076-479ec3c295ba
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-10 09:53:48.855 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-10 09:53:49.171 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-10 09:53:49.622 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-10 09:53:49.655 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-10 09:53:49.655 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@40ce3818]]
+2025-11-10 09:53:49.655 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-10 09:53:49.672 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-10 09:53:49.688 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Started PetpoojaCloneApplication in 4.716 seconds (process running for 465.334)
+2025-11-10 09:53:49.688 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:53:49.688 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:53:49.688 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-10 09:53:49.688 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:53:49.705 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:53:49.721 [restartedMain] INFO  c.e.p.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-10 09:53:49.721 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-10 09:53:49.721 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-10 09:53:49.721 [restartedMain] INFO  c.e.p.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-10 09:53:49.738 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-10 09:53:49.738 [restartedMain] INFO  c.e.p.service.SeedDataService - 📋 Seeding tasks...
+2025-11-10 09:53:49.738 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-10 09:53:49.738 [restartedMain] INFO  c.e.p.service.SeedDataService - 👔 Seeding employees...
+2025-11-10 09:53:49.757 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-10 09:53:49.757 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-10 09:53:49.757 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-10 09:53:49.757 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-10 09:54:21.289 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-10 09:54:21.290 [Thread-13] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-10 09:54:21.304 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-10 09:54:21.305 [Thread-13] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-10 09:54:21.305 [Thread-13] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@40ce3818]]
+2025-11-10 09:54:21.305 [Thread-13] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-10 09:54:21.305 [Thread-13] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:54:21.305 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-10 09:54:21.305 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-10 09:54:21.428 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:54:21.429 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:54:21.691 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:54:21.722 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:54:21.806 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:54:21.807 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:54:21.807 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:54:21.822 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:54:21.822 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 392 ms
+2025-11-10 09:54:21.839 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:54:21.839 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
+2025-11-10 09:54:21.839 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-10 09:54:21.889 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-10 09:54:21.890 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-11-10 09:54:21.939 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@7c520dd9
+2025-11-10 09:54:21.939 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-11-10 09:54:21.958 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 09:54:22.309 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:54:22.552 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 09:54:22.554 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 81887960-557f-4cf0-ae16-9152637c9e90
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-10 09:54:22.554 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-10 09:54:22.575 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-11-10 09:54:22.671 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-10 09:54:22.754 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-10 09:54:22.771 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-10 09:54:22.771 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2cf83662]]
+2025-11-10 09:54:22.771 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-10 09:54:22.771 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-10 09:54:22.784 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Started PetpoojaCloneApplication in 1.38 seconds (process running for 498.422)
+2025-11-10 09:54:22.786 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:22.787 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:22.787 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-10 09:54:22.787 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:22.790 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-10 09:54:22.791 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-10 09:54:22.791 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-10 09:54:22.792 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-10 09:54:22.792 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-10 09:54:22.792 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-10 09:54:22.793 [restartedMain] INFO  c.e.p.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-10 09:54:22.803 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-10 09:54:22.803 [restartedMain] INFO  c.e.p.service.SeedDataService - 📋 Seeding tasks...
+2025-11-10 09:54:22.805 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-10 09:54:22.805 [restartedMain] INFO  c.e.p.service.SeedDataService - 👔 Seeding employees...
+2025-11-10 09:54:22.805 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-10 09:54:22.805 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-10 09:54:22.805 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-10 09:54:22.805 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-10 09:54:28.318 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-10 09:54:28.321 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-10 09:54:28.323 [Thread-17] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-10 09:54:28.332 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-10 09:54:28.333 [Thread-17] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-10 09:54:28.333 [Thread-17] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2cf83662]]
+2025-11-10 09:54:28.333 [Thread-17] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-10 09:54:28.336 [Thread-17] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:54:28.337 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-11-10 09:54:28.339 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-11-10 09:54:28.429 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:54:28.429 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:54:28.669 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:54:28.702 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:54:28.788 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:54:28.788 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:54:28.788 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:54:28.805 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:54:28.805 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 375 ms
+2025-11-10 09:54:28.822 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:54:28.837 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
+2025-11-10 09:54:28.838 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-10 09:54:28.873 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-10 09:54:28.873 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-11-10 09:54:28.934 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@2132c043
+2025-11-10 09:54:28.935 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-11-10 09:54:28.945 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 09:54:29.436 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:54:29.690 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 09:54:29.697 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ba30908a-5deb-44a0-9979-ac795eb7cf32
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-10 09:54:29.698 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-10 09:54:29.713 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-11-10 09:54:29.768 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-10 09:54:29.860 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-10 09:54:29.870 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-10 09:54:29.871 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@69a884e4]]
+2025-11-10 09:54:29.871 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-10 09:54:29.874 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-10 09:54:29.878 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Started PetpoojaCloneApplication in 1.471 seconds (process running for 505.516)
+2025-11-10 09:54:29.879 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:29.880 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:29.880 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-10 09:54:29.880 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:29.883 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-10 09:54:29.883 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-10 09:54:29.884 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:29.885 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-10 09:54:29.885 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-10 09:54:29.886 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:29.886 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:29.890 [restartedMain] INFO  c.e.p.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-10 09:54:29.890 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-10 09:54:29.892 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-10 09:54:29.892 [restartedMain] INFO  c.e.p.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-10 09:54:29.895 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-10 09:54:29.896 [restartedMain] INFO  c.e.p.service.SeedDataService - 📋 Seeding tasks...
+2025-11-10 09:54:29.899 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-10 09:54:29.900 [restartedMain] INFO  c.e.p.service.SeedDataService - 👔 Seeding employees...
+2025-11-10 09:54:29.902 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-10 09:54:29.902 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-10 09:54:29.905 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-10 09:54:29.906 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-10 09:54:30.575 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-10 09:54:31.297 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-10 09:54:31.297 [Thread-21] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-10 09:54:31.585 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-10 09:54:31.586 [Thread-21] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-10 09:54:31.586 [Thread-21] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@69a884e4]]
+2025-11-10 09:54:31.587 [Thread-21] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-10 09:54:31.590 [Thread-21] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:54:31.591 [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-11-10 09:54:31.594 [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-11-10 09:54:31.704 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:54:31.705 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:54:32.370 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:54:32.453 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:54:32.706 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:54:32.708 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:54:32.709 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:54:32.774 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:54:32.775 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1069 ms
+2025-11-10 09:54:32.862 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:54:32.869 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
+2025-11-10 09:54:32.869 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-10 09:54:32.987 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-10 09:54:32.987 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2025-11-10 09:54:33.070 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@4705b55
+2025-11-10 09:54:33.070 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2025-11-10 09:54:33.086 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 09:54:33.786 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:54:34.337 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 09:54:34.366 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1088b73a-3b19-45ca-83d6-44c0e2dad7d5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-10 09:54:34.371 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-10 09:54:34.405 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-11-10 09:54:34.587 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-10 09:54:34.803 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-10 09:54:34.837 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-10 09:54:34.837 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36398b89]]
+2025-11-10 09:54:34.837 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-10 09:54:34.837 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-10 09:54:34.855 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Started PetpoojaCloneApplication in 3.179 seconds (process running for 510.494)
+2025-11-10 09:54:34.858 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:34.859 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:34.859 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-10 09:54:34.860 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:34.864 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-10 09:54:34.865 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-10 09:54:34.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-10 09:54:34.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-10 09:54:34.870 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-10 09:54:34.870 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-10 09:54:34.870 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-10 09:54:34.870 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-10 09:54:34.871 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-10 09:54:34.871 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-10 09:54:34.871 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-10 09:54:34.872 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-10 09:54:34.872 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:34.872 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-10 09:54:34.873 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-10 09:54:34.873 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:54:34.874 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:54:34.883 [restartedMain] INFO  c.e.p.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-10 09:54:34.884 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-10 09:54:34.888 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-10 09:54:34.888 [restartedMain] INFO  c.e.p.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-10 09:54:34.888 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-10 09:54:34.888 [restartedMain] INFO  c.e.p.service.SeedDataService - 📋 Seeding tasks...
+2025-11-10 09:54:34.904 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-10 09:54:34.904 [restartedMain] INFO  c.e.p.service.SeedDataService - 👔 Seeding employees...
+2025-11-10 09:54:34.910 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-10 09:54:34.911 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-10 09:54:34.916 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-10 09:54:34.922 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-10 09:54:34.942 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-10 09:54:58.543 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-11-10 09:54:58.546 [Thread-25] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-10 09:54:58.556 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-10 09:54:58.560 [Thread-25] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-10 09:54:58.560 [Thread-25] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36398b89]]
+2025-11-10 09:54:58.561 [Thread-25] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-10 09:54:58.565 [Thread-25] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:54:58.567 [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2025-11-10 09:54:58.574 [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-11-10 09:54:58.741 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:54:58.741 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:55:00.818 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:55:00.851 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:55:00.934 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:55:00.935 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:55:00.935 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:55:00.935 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:55:00.935 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2192 ms
+2025-11-10 09:55:00.972 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:55:00.975 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
+2025-11-10 09:55:00.975 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-10 09:55:01.003 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-10 09:55:01.003 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2025-11-10 09:55:01.070 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@1a34f6cb
+2025-11-10 09:55:01.070 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2025-11-10 09:55:01.083 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 09:55:01.484 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:55:01.685 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 09:55:01.692 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c8b3746f-7ba4-49ca-8451-2c16eae934d0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-10 09:55:01.692 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-10 09:55:01.703 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-11-10 09:55:01.753 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-10 09:55:01.847 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-10 09:55:01.851 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-10 09:55:01.851 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4568a659]]
+2025-11-10 09:55:01.851 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-10 09:55:01.851 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-10 09:55:01.851 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Started PetpoojaCloneApplication in 3.166 seconds (process running for 537.501)
+2025-11-10 09:55:01.851 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:55:01.851 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:55:01.851 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-10 09:55:01.851 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:55:01.868 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-10 09:55:01.869 [restartedMain] INFO  c.e.p.service.SeedDataService - 📋 Seeding tasks...
+2025-11-10 09:55:01.886 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-10 09:55:01.886 [restartedMain] INFO  c.e.p.service.SeedDataService - 👔 Seeding employees...
+2025-11-10 09:55:01.886 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-10 09:55:01.886 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-10 09:55:01.886 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-10 09:55:01.886 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-10 09:55:01.940 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-10 09:55:03.301 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2025-11-10 09:55:03.301 [Thread-29] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-10 09:55:03.318 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-10 09:55:03.318 [Thread-29] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-10 09:55:03.318 [Thread-29] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4568a659]]
+2025-11-10 09:55:03.318 [Thread-29] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-10 09:55:03.318 [Thread-29] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:55:03.318 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2025-11-10 09:55:03.318 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+2025-11-10 09:55:03.435 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 09:55:03.435 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 09:55:03.651 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 09:55:03.686 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 17 JPA repository interfaces.
+2025-11-10 09:55:03.768 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-10 09:55:03.768 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-10 09:55:03.768 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-10 09:55:03.786 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-10 09:55:03.786 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 351 ms
+2025-11-10 09:55:03.803 [restartedMain] WARN  c.e.petpooja_clone.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-10 09:55:03.819 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
+2025-11-10 09:55:03.820 [restartedMain] INFO  c.e.p.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-10 09:55:03.853 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-10 09:55:03.853 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2025-11-10 09:55:04.036 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@6447f08c
+2025-11-10 09:55:04.036 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2025-11-10 09:55:04.036 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 09:55:04.438 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 09:55:04.634 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 09:55:04.651 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c9e0094d-12ea-4d26-90ef-84bca9109178
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-10 09:55:04.651 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-10 09:55:04.670 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-11-10 09:55:04.719 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-10 09:55:04.821 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-10 09:55:04.821 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-10 09:55:04.821 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6dd7c2cf]]
+2025-11-10 09:55:04.821 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-10 09:55:04.836 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Started PetpoojaCloneApplication in 1.419 seconds (process running for 540.479)
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - ========================================
+2025-11-10 09:55:04.838 [restartedMain] INFO  c.e.p.c.DatabaseInitializationListener - 
+2025-11-10 09:55:04.854 [restartedMain] INFO  c.e.p.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-10 09:55:04.855 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-10 09:55:04.858 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-10 09:55:04.860 [restartedMain] INFO  c.e.p.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-10 09:55:04.862 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-10 09:55:04.862 [restartedMain] INFO  c.e.p.service.SeedDataService - 📋 Seeding tasks...
+2025-11-10 09:55:04.870 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-10 09:55:04.870 [restartedMain] INFO  c.e.p.service.SeedDataService - 👔 Seeding employees...
+2025-11-10 09:55:04.875 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-10 09:55:04.875 [restartedMain] INFO  c.e.p.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-10 09:55:04.880 [restartedMain] INFO  c.e.p.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-10 09:55:04.880 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-10 09:55:31.628 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-10 10:11:33.332 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 90 class path changes (1 addition, 2 deletions, 87 modifications)
+2025-11-10 10:11:33.335 [Thread-33] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-10 10:11:33.345 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-10 10:11:33.347 [Thread-33] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-10 10:11:33.347 [Thread-33] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6dd7c2cf]]
+2025-11-10 10:11:33.347 [Thread-33] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-10 10:11:33.350 [Thread-33] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-10 10:11:33.352 [Thread-33] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+2025-11-10 10:11:33.354 [Thread-33] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+2025-11-10 10:11:44.761 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 10:11:44.762 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 10:11:46.880 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 10:11:46.880 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-11-10 10:11:46.921 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+2025-11-10 10:11:46.921 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-10 10:11:46.928 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:136)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:539)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.petpooja_clone.PetpoojaCloneApplication.main(PetpoojaCloneApplication.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.cglib.core.CodeGenerationException: java.lang.NoClassDefFoundError-->JwtAuthFilter
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:128)
+	... 16 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: JwtAuthFilter
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3549)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2727)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.lambda$new$0(ClassLoaderAwareGeneratorStrategy.java:41)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:76)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:370)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:133)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:321)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:198)
+	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: JwtAuthFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 32 common frames omitted
+2025-11-10 10:11:49.441 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 10:11:49.441 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 10:11:49.662 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 10:11:49.662 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-11-10 10:11:49.703 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+2025-11-10 10:11:49.707 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-10 10:11:49.709 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:136)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:539)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.petpooja_clone.PetpoojaCloneApplication.main(PetpoojaCloneApplication.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.cglib.core.CodeGenerationException: java.lang.NoClassDefFoundError-->JwtAuthFilter
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:128)
+	... 16 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: JwtAuthFilter
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3549)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2727)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.lambda$new$0(ClassLoaderAwareGeneratorStrategy.java:41)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:76)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:370)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:133)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:321)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:198)
+	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: JwtAuthFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 32 common frames omitted
+2025-11-10 10:11:53.077 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 10:11:53.077 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 10:11:53.505 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 10:11:53.509 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-11-10 10:11:53.536 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+2025-11-10 10:11:53.540 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-10 10:11:53.543 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:136)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:539)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.petpooja_clone.PetpoojaCloneApplication.main(PetpoojaCloneApplication.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.cglib.core.CodeGenerationException: java.lang.NoClassDefFoundError-->JwtAuthFilter
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:128)
+	... 16 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: JwtAuthFilter
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3549)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2727)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.lambda$new$0(ClassLoaderAwareGeneratorStrategy.java:41)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:76)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:370)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:133)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:321)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:198)
+	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: JwtAuthFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 32 common frames omitted
+2025-11-10 10:12:00.156 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 10:12:00.157 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 10:12:00.412 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 10:12:00.416 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2025-11-10 10:12:00.444 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+2025-11-10 10:12:00.448 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-10 10:12:00.451 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:136)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:539)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.petpooja_clone.PetpoojaCloneApplication.main(PetpoojaCloneApplication.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.cglib.core.CodeGenerationException: java.lang.NoClassDefFoundError-->JwtAuthFilter
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:128)
+	... 16 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: JwtAuthFilter
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3549)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2727)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.lambda$new$0(ClassLoaderAwareGeneratorStrategy.java:41)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:76)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:370)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:133)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:321)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:198)
+	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: JwtAuthFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 32 common frames omitted
+2025-11-10 10:12:22.828 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 10:12:22.828 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 10:12:23.728 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 10:12:23.744 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-11-10 10:12:23.812 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+2025-11-10 10:12:23.833 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-10 10:12:23.837 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:136)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:539)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.petpooja_clone.PetpoojaCloneApplication.main(PetpoojaCloneApplication.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.cglib.core.CodeGenerationException: java.lang.NoClassDefFoundError-->JwtAuthFilter
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:128)
+	... 16 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: JwtAuthFilter
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3549)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2727)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.lambda$new$0(ClassLoaderAwareGeneratorStrategy.java:41)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:76)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:370)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:133)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:321)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:198)
+	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: JwtAuthFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 32 common frames omitted
+2025-11-10 10:12:31.246 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - Starting PetpoojaCloneApplication using Java 21.0.8 with PID 17636 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-10 10:12:31.246 [restartedMain] INFO  c.e.p.PetpoojaCloneApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-10 10:12:32.399 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-10 10:12:32.413 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2025-11-10 10:12:32.497 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+2025-11-10 10:12:32.498 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-10 10:12:32.513 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Could not enhance configuration class [com.example.petpooja_clone.config.SecurityConfig]. Consider declaring @Configuration(proxyBeanMethods=false) without inter-bean references between @Bean methods on the configuration class, avoiding the need for CGLIB enhancement.
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:136)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:539)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.petpooja_clone.PetpoojaCloneApplication.main(PetpoojaCloneApplication.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.cglib.core.CodeGenerationException: java.lang.NoClassDefFoundError-->JwtAuthFilter
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:202)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:128)
+	... 16 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: JwtAuthFilter
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3549)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2727)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.lambda$new$0(ClassLoaderAwareGeneratorStrategy.java:41)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:76)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:370)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:133)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:321)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:198)
+	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: JwtAuthFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 32 common frames omitted

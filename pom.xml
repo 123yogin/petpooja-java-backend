@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>petpooja_clone</artifactId>
+	<artifactId>restrosuite</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>petpooja_clone</name>
-	<description>Petpooja Project clone</description>
+	<name>RestroSuite</name>
+	<description>RestroSuite - Restaurant POS System</description>
 	<url/>
 	<licenses>
 		<license/>
