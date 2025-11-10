@@ -34,6 +34,8 @@ public class TableEntity {
 
     private String location; // e.g., "Floor 1", "Outdoor", "VIP Section"
 
+    private String qrCodeUrl; // URL to access the table's ordering page
+
     @ManyToOne
     @JoinColumn(name = "outlet_id")
     private Outlet outlet; // Multi-outlet support

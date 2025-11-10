@@ -30,6 +30,8 @@ public class SecurityConfig {
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/customer/**").permitAll() // Allow public access to customer endpoints
+                .requestMatchers("/customer/**").permitAll() // Allow public access to customer frontend pages
                 .requestMatchers("/ws/**").permitAll() // Allow WebSocket connections
                 .requestMatchers("/api/menu").permitAll() // Allow all to view menu
                 .requestMatchers("/api/menu/**").hasAnyAuthority("ADMIN") // Only ADMIN can modify
