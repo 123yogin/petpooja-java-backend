@@ -1,7 +1,7 @@
 package com.example.restrosuite.controller;
 
 import com.example.restrosuite.entity.MenuItem;
-import com.example.restrosuite.repository.MenuItemRepository;
+import com.example.restrosuite.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,48 +13,37 @@ import java.util.UUID;
 public class MenuController {
 
     @Autowired
-    private MenuItemRepository menuItemRepository;
+    private MenuService menuService;
 
     @GetMapping
     public List<MenuItem> getAll() {
-        return menuItemRepository.findAll();
+        return menuService.getAllMenuItems();
     }
 
     @PostMapping
     public MenuItem addItem(@RequestBody MenuItem item) {
-        item.setAvailable(true);
-        return menuItemRepository.save(item);
+        return menuService.createMenuItem(item);
     }
 
     @PutMapping("/{id}")
     public MenuItem updateItem(@PathVariable UUID id, @RequestBody MenuItem item) {
-        MenuItem existing = menuItemRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Menu item not found"));
-        existing.setName(item.getName());
-        existing.setPrice(item.getPrice());
-        existing.setAvailable(item.isAvailable());
-        existing.setCategory(item.getCategory());
-        existing.setDescription(item.getDescription());
-        return menuItemRepository.save(existing);
+        return menuService.updateMenuItem(id, item);
     }
 
     @PutMapping("/{id}/toggle-availability")
     public MenuItem toggleAvailability(@PathVariable UUID id) {
-        MenuItem existing = menuItemRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Menu item not found"));
-        existing.setAvailable(!existing.isAvailable());
-        return menuItemRepository.save(existing);
+        return menuService.toggleAvailability(id);
     }
 
     @DeleteMapping("/bulk")
     public String deleteBulk(@RequestBody List<UUID> ids) {
-        menuItemRepository.deleteAllById(ids);
+        menuService.deleteMenuItemsBulk(ids);
         return "Items deleted!";
     }
 
     @DeleteMapping("/{id}")
     public String deleteItem(@PathVariable UUID id) {
-        menuItemRepository.deleteById(id);
+        menuService.deleteMenuItem(id);
         return "Menu item deleted!";
     }
 

@@ -108,7 +108,17 @@ public class BillingController {
 
         for (OrderItem item : order.getItems()) {
             MenuItem menuItem = item.getMenuItem();
-            double itemAmount = item.getPrice();
+            
+            // Calculate item amount including modifiers
+            double baseItemAmount = item.getPrice() * item.getQuantity();
+            double modifierAmount = 0.0;
+            if (item.getModifiers() != null && !item.getModifiers().isEmpty()) {
+                modifierAmount = item.getModifiers().stream()
+                        .mapToDouble(mod -> mod.getPrice() * item.getQuantity())
+                        .sum();
+            }
+            double itemAmount = baseItemAmount + modifierAmount;
+            
             double itemTaxRate = (menuItem.getTaxRate() != null && menuItem.getTaxRate() > 0) 
                 ? menuItem.getTaxRate() : 5.0; // Default 5% if not set
             double itemTax = itemAmount * (itemTaxRate / 100.0);
@@ -391,7 +401,17 @@ public class BillingController {
         for (Order order : ordersWithoutBills) {
             for (OrderItem item : order.getItems()) {
                 MenuItem menuItem = item.getMenuItem();
-                double itemAmount = item.getPrice();
+                
+                // Calculate item amount including modifiers
+                double baseItemAmount = item.getPrice() * item.getQuantity();
+                double modifierAmount = 0.0;
+                if (item.getModifiers() != null && !item.getModifiers().isEmpty()) {
+                    modifierAmount = item.getModifiers().stream()
+                            .mapToDouble(mod -> mod.getPrice() * item.getQuantity())
+                            .sum();
+                }
+                double itemAmount = baseItemAmount + modifierAmount;
+                
                 double itemTaxRate = (menuItem.getTaxRate() != null && menuItem.getTaxRate() > 0) 
                     ? menuItem.getTaxRate() : 5.0;
                 double itemTax = itemAmount * (itemTaxRate / 100.0);

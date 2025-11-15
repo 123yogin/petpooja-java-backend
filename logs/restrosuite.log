@@ -1,304 +1,414 @@
-2025-11-11 00:02:18.890 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-11-11 00:02:18.906 [Thread-269] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-11 00:02:18.915 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-11-11 00:02:18.922 [Thread-269] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
-2025-11-11 00:02:18.923 [Thread-269] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@404619fe]]
-2025-11-11 00:02:18.937 [Thread-269] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
-2025-11-11 00:02:18.943 [Thread-269] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11 00:02:18.946 [Thread-269] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-64 - Shutdown initiated...
-2025-11-11 00:02:18.966 [Thread-269] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-64 - Shutdown completed.
-2025-11-11 00:02:19.223 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 9660 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
-2025-11-11 00:02:19.224 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
-2025-11-11 00:02:20.441 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-11 00:02:20.609 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 160 ms. Found 17 JPA repository interfaces.
-2025-11-11 00:02:20.978 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-11-11 00:02:20.979 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-11-11 00:02:20.979 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-11 00:02:21.040 [restartedMain] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-11-11 00:02:21.045 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1814 ms
-2025-11-11 00:02:21.130 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
-2025-11-11 00:02:21.136 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
-2025-11-11 00:02:21.136 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
-2025-11-11 00:02:21.290 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-11 00:02:21.292 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-65 - Starting...
-2025-11-11 00:02:21.416 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-65 - Added connection org.postgresql.jdbc.PgConnection@32a7e078
-2025-11-11 00:02:21.416 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-65 - Start completed.
-2025-11-11 00:02:21.431 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-11 00:02:22.217 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11 00:02:23.262 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-11 00:02:23.291 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+2025-11-15 11:33:06.607 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 57716 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-15 11:33:06.616 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-15 11:33:06.706 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-15 11:33:06.706 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-15 11:33:09.622 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15 11:33:09.927 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 280 ms. Found 17 JPA repository interfaces.
+2025-11-15 11:33:11.434 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-15 11:33:11.460 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-15 11:33:11.460 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15 11:33:11.558 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-15 11:33:11.558 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4852 ms
+2025-11-15 11:33:11.750 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-15 11:33:11.870 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_7YeOOqnqx/.well-known/jwks.json
+2025-11-15 11:33:11.911 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-15 11:33:13.093 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15 11:33:13.148 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-15 11:33:13.775 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@577eb548
+2025-11-15 11:33:13.794 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-15 11:33:13.947 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-15 11:33:17.728 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 11:33:18.582 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-15 11:33:20.778 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15 11:33:20.852 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: 1039708f-87bf-4fde-9e91-1581ba6c84e3
+Using generated security password: 8ed339a8-e058-4a03-9e96-b3ef6b58e209
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-11-11 00:02:23.296 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-11-11 00:02:23.596 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
-2025-11-11 00:02:23.841 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-11-11 00:02:23.890 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
-2025-11-11 00:02:23.891 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@274db641]]
-2025-11-11 00:02:23.891 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
-2025-11-11 00:02:23.891 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-11-11 00:02:23.918 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 4.814 seconds (process running for 4505.449)
-2025-11-11 00:02:23.923 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:02:23.923 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:02:23.923 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
-2025-11-11 00:02:23.923 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:02:23.925 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
-2025-11-11 00:02:23.934 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
-2025-11-11 00:02:23.934 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
-2025-11-11 00:02:23.934 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
-2025-11-11 00:02:23.934 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
-2025-11-11 00:02:23.934 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
-2025-11-11 00:02:23.934 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
-2025-11-11 00:02:23.934 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
-2025-11-11 00:02:23.934 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
-2025-11-11 00:02:23.939 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
-2025-11-11 00:02:23.939 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
-2025-11-11 00:02:23.939 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
-2025-11-11 00:02:23.939 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:02:23.941 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
-2025-11-11 00:02:23.941 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
-2025-11-11 00:02:23.941 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:02:23.941 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:02:23.950 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
-2025-11-11 00:02:23.950 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
-2025-11-11 00:02:23.958 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
-2025-11-11 00:02:23.958 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
-2025-11-11 00:02:23.958 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
-2025-11-11 00:02:23.958 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
-2025-11-11 00:02:23.974 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
-2025-11-11 00:02:23.974 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
-2025-11-11 00:02:23.974 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
-2025-11-11 00:02:23.974 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
-2025-11-11 00:02:23.974 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
-2025-11-11 00:02:23.991 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2025-11-11 00:02:25.628 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-11-11 00:02:29.474 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-11-11 00:02:29.476 [Thread-277] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-11 00:02:29.479 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-11-11 00:02:29.494 [Thread-277] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
-2025-11-11 00:02:29.494 [Thread-277] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@274db641]]
-2025-11-11 00:02:29.494 [Thread-277] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
-2025-11-11 00:02:29.497 [Thread-277] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11 00:02:29.497 [Thread-277] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-65 - Shutdown initiated...
-2025-11-11 00:02:29.506 [Thread-277] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-65 - Shutdown completed.
-2025-11-11 00:02:29.734 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 9660 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
-2025-11-11 00:02:29.734 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
-2025-11-11 00:02:30.474 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-11 00:02:30.560 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 17 JPA repository interfaces.
-2025-11-11 00:02:30.752 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-11-11 00:02:30.752 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-11-11 00:02:30.752 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-11 00:02:30.797 [restartedMain] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-11-11 00:02:30.797 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1063 ms
-2025-11-11 00:02:30.873 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
-2025-11-11 00:02:30.880 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
-2025-11-11 00:02:30.882 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
-2025-11-11 00:02:31.006 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-11 00:02:31.010 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-66 - Starting...
-2025-11-11 00:02:31.107 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-66 - Added connection org.postgresql.jdbc.PgConnection@7a94384
-2025-11-11 00:02:31.107 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-66 - Start completed.
-2025-11-11 00:02:31.135 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-11 00:02:32.027 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11 00:02:32.496 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-11 00:02:32.515 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+2025-11-15 11:33:20.866 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-15 11:33:21.521 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-15 11:33:22.455 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-15 11:33:22.601 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-15 11:33:22.604 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1639aec8]]
+2025-11-15 11:33:22.604 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-15 11:33:22.672 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-15 11:33:22.706 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 17.282 seconds (process running for 18.8)
+2025-11-15 11:33:23.039 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 11:33:23.039 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 11:33:23.039 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-15 11:33:23.039 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 11:33:23.066 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-15 11:33:23.068 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-15 11:33:23.068 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-15 11:33:23.068 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-15 11:33:23.074 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-15 11:33:23.074 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-15 11:33:23.074 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-15 11:33:23.076 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-15 11:33:23.076 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-15 11:33:23.076 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-15 11:33:23.078 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-15 11:33:23.078 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-15 11:33:23.078 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 11:33:23.078 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-15 11:33:23.078 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-15 11:33:23.082 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 11:33:23.082 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 11:33:23.333 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-15 11:33:23.333 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-15 11:33:23.335 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-15 11:33:23.335 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-15 11:33:23.335 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-15 11:33:23.335 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
+2025-11-15 11:33:23.343 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-15 11:33:23.343 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
+2025-11-15 11:33:23.343 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-15 11:33:23.351 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-15 11:33:23.352 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-15 11:34:07.352 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-15 12:13:27.944 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 90 class path changes (0 additions, 89 deletions, 1 modification)
+2025-11-15 12:13:27.962 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-15 12:13:27.983 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-15 12:13:28.009 [Thread-5] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-15 12:13:28.015 [Thread-5] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1639aec8]]
+2025-11-15 12:13:28.015 [Thread-5] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-15 12:13:28.033 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:13:28.042 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-15 12:13:28.051 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-15 12:13:28.376 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 57716 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-15 12:13:28.376 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-15 12:13:29.575 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15 12:13:29.583 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-11-15 12:13:29.998 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-15 12:13:29.998 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-15 12:13:30.010 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15 12:13:30.093 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-15 12:13:30.093 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1709 ms
+2025-11-15 12:13:30.397 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15 12:13:30.397 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-15 12:13:30.555 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@39c181b8
+2025-11-15 12:13:30.555 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-15 12:13:30.584 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-15 12:13:30.660 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:13:30.782 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15 12:13:31.243 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: 640d83ee-47c7-49f4-adba-8ab32ca21fa1
+Using generated security password: 1be7e1e3-797f-485b-8e33-a2f6aab9a628
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-11-11 00:02:32.520 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-11-11 00:02:32.654 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
-2025-11-11 00:02:32.811 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-11-11 00:02:32.829 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
-2025-11-11 00:02:32.829 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@68d18d9c]]
-2025-11-11 00:02:32.829 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
-2025-11-11 00:02:32.837 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-11-11 00:02:32.842 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 3.21 seconds (process running for 4514.379)
-2025-11-11 00:02:32.853 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:02:32.853 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:02:32.853 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
-2025-11-11 00:02:32.853 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:02:32.864 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:02:32.878 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
-2025-11-11 00:02:32.878 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
-2025-11-11 00:02:32.880 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
-2025-11-11 00:02:32.880 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
-2025-11-11 00:02:32.880 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
-2025-11-11 00:02:32.880 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
-2025-11-11 00:02:32.892 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
-2025-11-11 00:02:32.892 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
-2025-11-11 00:02:32.892 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
-2025-11-11 00:02:32.892 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
-2025-11-11 00:02:32.892 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
-2025-11-11 00:02:32.892 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2025-11-11 00:02:32.956 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-11-11 00:06:41.290 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-11-11 00:06:41.294 [Thread-281] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-11 00:06:41.298 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-11-11 00:06:41.304 [Thread-281] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
-2025-11-11 00:06:41.304 [Thread-281] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@68d18d9c]]
-2025-11-11 00:06:41.304 [Thread-281] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
-2025-11-11 00:06:41.310 [Thread-281] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11 00:06:41.310 [Thread-281] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-66 - Shutdown initiated...
-2025-11-11 00:06:41.338 [Thread-281] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-66 - Shutdown completed.
-2025-11-11 00:06:41.587 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 9660 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
-2025-11-11 00:06:41.587 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
-2025-11-11 00:06:42.669 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-11 00:06:42.760 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 17 JPA repository interfaces.
-2025-11-11 00:06:43.030 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-11-11 00:06:43.037 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-11-11 00:06:43.037 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-11 00:06:43.109 [restartedMain] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-11-11 00:06:43.109 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1512 ms
-2025-11-11 00:06:43.194 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
-2025-11-11 00:06:43.196 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
-2025-11-11 00:06:43.202 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
-2025-11-11 00:06:43.317 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-11 00:06:43.325 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-67 - Starting...
-2025-11-11 00:06:43.406 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-67 - Added connection org.postgresql.jdbc.PgConnection@295c3677
-2025-11-11 00:06:43.414 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-67 - Start completed.
-2025-11-11 00:06:43.426 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-11 00:06:45.164 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11 00:06:45.968 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-11 00:06:46.007 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+2025-11-15 12:13:31.243 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-15 12:13:31.312 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-15 12:13:31.443 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-15 12:13:31.499 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-15 12:13:31.513 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 3.314 seconds (process running for 2427.61)
+2025-11-15 12:13:31.526 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
 
-Using generated security password: dfd708a2-e706-4497-b4e4-cc3750a07946
 
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
+==========================
+CONDITION EVALUATION DELTA
+==========================
 
-2025-11-11 00:06:46.010 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-11-11 00:06:46.348 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
-2025-11-11 00:06:46.639 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-11-11 00:06:46.672 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
-2025-11-11 00:06:46.672 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3851715c]]
-2025-11-11 00:06:46.672 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
-2025-11-11 00:06:46.687 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-11-11 00:06:46.695 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 5.199 seconds (process running for 4768.226)
-2025-11-11 00:06:46.695 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:06:46.695 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:06:46.695 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
-2025-11-11 00:06:46.703 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:06:46.706 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
-2025-11-11 00:06:46.706 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
-2025-11-11 00:06:46.711 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
-2025-11-11 00:06:46.711 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
-2025-11-11 00:06:46.711 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
-2025-11-11 00:06:46.711 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
-2025-11-11 00:06:46.711 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
-2025-11-11 00:06:46.711 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:06:46.712 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:06:46.724 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
-2025-11-11 00:06:46.725 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
-2025-11-11 00:06:46.730 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
-2025-11-11 00:06:46.730 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
-2025-11-11 00:06:46.730 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
-2025-11-11 00:06:46.730 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
-2025-11-11 00:06:46.737 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
-2025-11-11 00:06:46.737 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
-2025-11-11 00:06:46.746 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
-2025-11-11 00:06:46.746 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
-2025-11-11 00:06:46.757 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
-2025-11-11 00:06:46.757 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2025-11-11 00:06:48.634 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-11-11 00:07:39.116 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-11-11 00:07:39.118 [Thread-286] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-11 00:07:39.125 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-11-11 00:07:39.128 [Thread-286] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
-2025-11-11 00:07:39.129 [Thread-286] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3851715c]]
-2025-11-11 00:07:39.130 [Thread-286] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
-2025-11-11 00:07:39.134 [Thread-286] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11 00:07:39.136 [Thread-286] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-67 - Shutdown initiated...
-2025-11-11 00:07:39.164 [Thread-286] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-67 - Shutdown completed.
-2025-11-11 00:07:39.361 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 9660 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
-2025-11-11 00:07:39.363 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
-2025-11-11 00:07:40.102 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-11 00:07:40.165 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 17 JPA repository interfaces.
-2025-11-11 00:07:40.316 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-11-11 00:07:40.317 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-11-11 00:07:40.317 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
-2025-11-11 00:07:40.353 [restartedMain] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-11-11 00:07:40.354 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 988 ms
-2025-11-11 00:07:40.399 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
-2025-11-11 00:07:40.405 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_w1hiCGvSF/.well-known/jwks.json
-2025-11-11 00:07:40.406 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
-2025-11-11 00:07:40.484 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-11 00:07:40.485 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-68 - Starting...
-2025-11-11 00:07:40.563 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-68 - Added connection org.postgresql.jdbc.PgConnection@7245e766
-2025-11-11 00:07:40.563 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-68 - Start completed.
-2025-11-11 00:07:40.575 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-11 00:07:41.959 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11 00:07:42.938 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-11 00:07:42.962 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Using generated security password: 72e45a18-191d-472b-abd2-f2ac5500f689
+Positive matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration#applicationTaskExecutorAsyncConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+
+Negative matches:
+-----------------
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   WebSocketMessagingAutoConfiguration.WebSocketMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration,com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans of type org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'com.fasterxml.jackson.databind.ObjectMapper', 'org.springframework.messaging.simp.config.AbstractMessageBrokerConfiguration' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-11-15 12:13:33.011 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-15 12:16:06.989 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 107 class path changes (107 additions, 0 deletions, 0 modifications)
+2025-11-15 12:16:06.992 [Thread-26] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-15 12:16:07.008 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-15 12:16:07.008 [Thread-26] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:16:07.008 [Thread-26] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-15 12:16:07.021 [Thread-26] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-15 12:16:07.259 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 57716 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-15 12:16:07.259 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-15 12:16:08.961 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15 12:16:09.074 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110 ms. Found 21 JPA repository interfaces.
+2025-11-15 12:16:09.456 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-15 12:16:09.460 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-15 12:16:09.460 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15 12:16:09.520 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-15 12:16:09.520 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2255 ms
+2025-11-15 12:16:09.603 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-15 12:16:09.612 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_7YeOOqnqx/.well-known/jwks.json
+2025-11-15 12:16:09.616 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-15 12:16:09.707 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15 12:16:09.711 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-11-15 12:16:09.816 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@32b90b19
+2025-11-15 12:16:09.816 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-11-15 12:16:09.835 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-15 12:16:11.437 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 9052 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-15 12:16:11.454 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-15 12:16:11.590 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-15 12:16:11.592 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-15 12:16:11.978 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:16:13.360 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15 12:16:13.392 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2ed86acd-5aa2-41e1-be7c-3a03d15ee908
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-11-11 00:07:42.964 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-11-11 00:07:43.304 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
-2025-11-11 00:07:43.507 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-11-11 00:07:43.546 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
-2025-11-11 00:07:43.547 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@29d194f5]]
-2025-11-11 00:07:43.547 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
-2025-11-11 00:07:43.552 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-11-11 00:07:43.563 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 4.297 seconds (process running for 4825.093)
-2025-11-11 00:07:43.570 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:07:43.571 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:07:43.571 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
-2025-11-11 00:07:43.572 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:07:43.576 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, order_item, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
-2025-11-11 00:07:43.581 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
-2025-11-11 00:07:43.582 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
-2025-11-11 00:07:43.583 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
-2025-11-11 00:07:43.583 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
-2025-11-11 00:07:43.583 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
-2025-11-11 00:07:43.583 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
-2025-11-11 00:07:43.584 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
-2025-11-11 00:07:43.584 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
-2025-11-11 00:07:43.584 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
-2025-11-11 00:07:43.584 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
-2025-11-11 00:07:43.584 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
-2025-11-11 00:07:43.585 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:07:43.585 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
-2025-11-11 00:07:43.585 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
-2025-11-11 00:07:43.585 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
-2025-11-11 00:07:43.585 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
-2025-11-11 00:07:43.594 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
-2025-11-11 00:07:43.594 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
-2025-11-11 00:07:43.601 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
-2025-11-11 00:07:43.601 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
-2025-11-11 00:07:43.605 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
-2025-11-11 00:07:43.605 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
-2025-11-11 00:07:43.610 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
-2025-11-11 00:07:43.610 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
-2025-11-11 00:07:43.615 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
-2025-11-11 00:07:43.616 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
-2025-11-11 00:07:43.621 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
-2025-11-11 00:07:43.623 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2025-11-11 00:07:44.632 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-15 12:16:13.396 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-15 12:16:13.686 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-15 12:16:13.970 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-15 12:16:14.002 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-15 12:16:14.004 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@77d55ee3]]
+2025-11-15 12:16:14.009 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-15 12:16:14.019 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-15 12:16:14.044 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 6.88 seconds (process running for 2590.137)
+2025-11-15 12:16:14.050 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:16:14.052 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:16:14.052 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-15 12:16:14.052 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:16:14.057 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, menu_item_modifier_group, menu_modifier, modifier_group, order_item, order_item_modifier, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-15 12:16:14.064 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-15 12:16:14.064 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-15 12:16:14.066 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-15 12:16:14.066 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-15 12:16:14.066 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-15 12:16:14.066 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-15 12:16:14.066 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-15 12:16:14.066 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-15 12:16:14.069 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-15 12:16:14.069 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-15 12:16:14.069 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-15 12:16:14.069 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:16:14.069 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-15 12:16:14.069 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-15 12:16:14.071 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:16:14.071 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:16:14.085 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-15 12:16:14.085 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-15 12:16:14.088 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-15 12:16:14.088 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-15 12:16:14.097 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-15 12:16:14.097 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
+2025-11-15 12:16:14.105 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-15 12:16:14.105 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
+2025-11-15 12:16:14.105 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-15 12:16:14.105 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-15 12:16:14.116 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-15 12:16:14.122 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter matched:
+      - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) found bean 'org.springframework.context.annotation.internalScheduledAnnotationProcessor' (OnBeanCondition)
+
+   WebSocketMessagingAutoConfiguration.WebSocketMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required classes 'com.fasterxml.jackson.databind.ObjectMapper', 'org.springframework.messaging.simp.config.AbstractMessageBrokerConfiguration' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration,com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found beans 'jacksonObjectMapper', 'org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration' (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+      Matched:
+         - found 'session' scope (OnWebApplicationCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) found beans of type 'java.util.concurrent.Executor' clientInboundChannelExecutor, clientOutboundChannelExecutor, brokerChannelExecutor (TaskExecutorConfigurations.OnExecutorCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-11-15 12:16:14.502 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15 12:16:14.736 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 210 ms. Found 21 JPA repository interfaces.
+2025-11-15 12:16:16.369 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-15 12:16:16.402 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-15 12:16:16.402 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15 12:16:16.522 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-15 12:16:16.522 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4928 ms
+2025-11-15 12:16:16.736 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-15 12:16:16.769 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_7YeOOqnqx/.well-known/jwks.json
+2025-11-15 12:16:16.802 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-15 12:16:18.102 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15 12:16:18.179 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-15 12:16:18.537 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8f9e056
+2025-11-15 12:16:18.547 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-15 12:16:18.642 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-15 12:16:22.066 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:16:22.678 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-15 12:16:24.785 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15 12:16:24.864 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 6fc08afd-d179-4f82-8fe3-f1653a12d72f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-15 12:16:24.869 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-15 12:16:25.516 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-15 12:16:26.197 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-11-15 12:16:26.302 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-15 12:16:26.302 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@63305bf0]]
+2025-11-15 12:16:26.302 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-15 12:16:26.319 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-15 12:16:26.319 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@63305bf0]]
+2025-11-15 12:16:26.319 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-15 12:16:26.330 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-11-15 12:16:26.354 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:16:26.361 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-15 12:16:26.380 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-15 12:16:26.405 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-15 12:16:26.481 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-11-15 12:16:35.996 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-15 12:17:21.036 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-15 12:17:21.044 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-15 12:17:21.048 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-15 12:17:21.052 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@77d55ee3]]
+2025-11-15 12:17:21.053 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-15 12:17:21.059 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:17:21.062 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-15 12:17:21.086 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-15 12:17:32.316 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 12392 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-15 12:17:32.322 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-15 12:17:32.451 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-15 12:17:32.451 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-15 12:17:34.208 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15 12:17:34.357 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 21 JPA repository interfaces.
+2025-11-15 12:17:35.125 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-15 12:17:35.144 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-15 12:17:35.144 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15 12:17:35.232 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-15 12:17:35.232 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2781 ms
+2025-11-15 12:17:35.382 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-15 12:17:35.411 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_7YeOOqnqx/.well-known/jwks.json
+2025-11-15 12:17:35.439 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-15 12:17:36.066 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15 12:17:36.116 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-15 12:17:36.349 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d4f88f5
+2025-11-15 12:17:36.353 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-15 12:17:36.400 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-15 12:17:38.389 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:17:38.828 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-15 12:17:40.123 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15 12:17:40.167 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e61b1b91-8005-4a79-a2bf-5d9715ec1478
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-15 12:17:40.184 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-15 12:17:40.609 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-15 12:17:41.105 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-15 12:17:41.163 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-15 12:17:41.165 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6cd62cf9]]
+2025-11-15 12:17:41.165 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-15 12:17:41.197 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-15 12:17:41.222 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 9.599 seconds (process running for 10.324)
+2025-11-15 12:17:41.425 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-15 12:17:41.476 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:17:41.476 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:17:41.476 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-15 12:17:41.478 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:17:41.497 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, menu_item_modifier_group, menu_modifier, modifier_group, order_item, order_item_modifier, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-15 12:17:41.498 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-15 12:17:41.500 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-15 12:17:41.504 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-15 12:17:41.506 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-15 12:17:41.512 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:17:41.512 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:17:41.676 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-15 12:17:41.682 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-15 12:17:41.684 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-15 12:17:41.684 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-15 12:17:41.690 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-15 12:17:41.691 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
+2025-11-15 12:17:41.694 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-15 12:17:41.694 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
+2025-11-15 12:17:41.700 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-15 12:17:41.700 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-15 12:17:41.700 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist

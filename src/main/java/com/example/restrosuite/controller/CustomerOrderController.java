@@ -41,6 +41,9 @@ public class CustomerOrderController {
     private IngredientRepository ingredientRepository;
 
     @Autowired
+    private MenuModifierRepository menuModifierRepository;
+
+    @Autowired
     private com.example.restrosuite.service.InvoiceService invoiceService;
 
     @Autowired
@@ -224,29 +227,73 @@ public class CustomerOrderController {
                 }
 
                 // Check if item already exists in order
+                // Note: For simplicity, we treat items with modifiers as different items
+                // In production, you might want to match items with same modifiers
                 boolean itemExists = false;
-                for (OrderItem existingItem : order.getItems()) {
-                    if (existingItem.getMenuItem().getId().equals(menuId)) {
-                        // Update quantity and price for existing item
-                        existingItem.setQuantity(existingItem.getQuantity() + qty);
-                        existingItem.setPrice(existingItem.getPrice() + (menuItem.getPrice() * qty));
-                        additionalTotal += menuItem.getPrice() * qty;
-                        itemExists = true;
-                        break;
+                boolean hasModifiers = i.containsKey("modifiers") && i.get("modifiers") != null;
+                
+                if (!hasModifiers) {
+                    // Only match items without modifiers
+                    for (OrderItem existingItem : order.getItems()) {
+                        if (existingItem.getMenuItem().getId().equals(menuId) && 
+                            (existingItem.getModifiers() == null || existingItem.getModifiers().isEmpty())) {
+                            // Update quantity and price for existing item
+                            existingItem.setQuantity(existingItem.getQuantity() + qty);
+                            // Note: price is per unit, so we just update quantity
+                            additionalTotal += menuItem.getPrice() * qty;
+                            itemExists = true;
+                            break;
+                        }
                     }
                 }
 
                 if (!itemExists) {
                     // Add new item
-                    double price = menuItem.getPrice() * qty;
-                    additionalTotal += price;
+                    double basePrice = menuItem.getPrice();
+                    
+                    // Process modifiers if provided
+                    List<OrderItemModifier> modifiers = new ArrayList<>();
+                    double modifierTotal = 0.0;
+                    if (i.containsKey("modifiers") && i.get("modifiers") != null) {
+                        @SuppressWarnings("unchecked")
+                        List<Map<String, Object>> modifierDataList = (List<Map<String, Object>>) i.get("modifiers");
+                        
+                        for (Map<String, Object> modifierData : modifierDataList) {
+                            UUID modifierId = UUID.fromString(modifierData.get("modifierId").toString());
+                            MenuModifier menuModifier = menuModifierRepository.findById(modifierId)
+                                    .orElseThrow(() -> new RuntimeException("Menu modifier not found: " + modifierId));
+                            
+                            if (!menuModifier.getIsActive()) {
+                                Map<String, Object> error = new HashMap<>();
+                                error.put("error", "Modifier " + menuModifier.getName() + " is not available");
+                                return ResponseEntity.badRequest().body(error);
+                            }
+
+                            OrderItemModifier orderItemModifier = OrderItemModifier.builder()
+                                    .menuModifier(menuModifier)
+                                    .price(menuModifier.getPrice())
+                                    .build();
+                            modifiers.add(orderItemModifier);
+                            modifierTotal += menuModifier.getPrice();
+                        }
+                    }
+                    
+                    double itemTotal = (basePrice + modifierTotal) * qty;
+                    additionalTotal += itemTotal;
 
                     OrderItem newItem = OrderItem.builder()
                             .menuItem(menuItem)
                             .quantity(qty)
-                            .price(price)
+                            .price(basePrice) // Store base price per unit
+                            .modifiers(modifiers)
                             .order(order)
                             .build();
+                    
+                    // Set back reference for modifiers
+                    for (OrderItemModifier modifier : modifiers) {
+                        modifier.setOrderItem(newItem);
+                    }
+                    
                     newOrderItems.add(newItem);
                 }
             }
