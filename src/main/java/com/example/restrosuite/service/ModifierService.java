@@ -156,11 +156,23 @@ public class ModifierService {
     }
 
     public List<MenuItemModifierGroupDTO> getModifierGroupsForMenuItemDTO(UUID menuItemId) {
-        List<MenuItemModifierGroup> links = menuItemModifierGroupRepository.findByMenuItemId(menuItemId);
-        return links.stream().map(link -> {
-            ModifierGroup group = link.getModifierGroup();
-            List<MenuModifier> modifiers = menuModifierRepository.findByModifierGroupId(group.getId());
+        // Use custom query to fetch only IDs without triggering lazy loading
+        // This prevents circular reference issues during serialization
+        List<Object[]> results = menuItemModifierGroupRepository.findLinkAndGroupIds(menuItemId);
+        
+        return results.stream().map(result -> {
+            UUID linkId = (UUID) result[0];
+            UUID groupId = (UUID) result[1];
+            Integer displayOrder = (Integer) result[2];
             
+            // Fetch the group separately by ID - this avoids lazy loading issues
+            ModifierGroup group = modifierGroupRepository.findById(groupId)
+                .orElseThrow(() -> new RuntimeException("Modifier group not found: " + groupId));
+            
+            // Fetch modifiers separately
+            List<MenuModifier> modifiers = menuModifierRepository.findByModifierGroupId(groupId);
+            
+            // Build DTO without any entity references
             ModifierGroupDTO groupDTO = ModifierGroupDTO.builder()
                 .id(group.getId())
                 .name(group.getName())
@@ -181,9 +193,9 @@ public class ModifierService {
                 .build();
             
             return MenuItemModifierGroupDTO.builder()
-                .id(link.getId())
+                .id(linkId)
                 .modifierGroup(groupDTO)
-                .displayOrder(link.getDisplayOrder())
+                .displayOrder(displayOrder)
                 .build();
         }).collect(Collectors.toList());
     }
