@@ -1,5 +1,8 @@
 package com.example.restrosuite.service;
 
+import com.example.restrosuite.dto.MenuItemModifierGroupDTO;
+import com.example.restrosuite.dto.MenuModifierDTO;
+import com.example.restrosuite.dto.ModifierGroupDTO;
 import com.example.restrosuite.entity.*;
 import com.example.restrosuite.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -27,8 +31,58 @@ public class ModifierService {
         return modifierGroupRepository.findAll();
     }
 
+    public List<ModifierGroupDTO> getAllModifierGroupsDTO() {
+        List<ModifierGroup> groups = modifierGroupRepository.findAll();
+        return groups.stream().map(group -> {
+            List<MenuModifier> modifiers = menuModifierRepository.findByModifierGroupId(group.getId());
+            return ModifierGroupDTO.builder()
+                .id(group.getId())
+                .name(group.getName())
+                .description(group.getDescription())
+                .isRequired(group.getIsRequired())
+                .allowMultiple(group.getAllowMultiple())
+                .minSelection(group.getMinSelection())
+                .maxSelection(group.getMaxSelection())
+                .isActive(group.getIsActive())
+                .modifiers(modifiers.stream().map(mod -> MenuModifierDTO.builder()
+                    .id(mod.getId())
+                    .name(mod.getName())
+                    .description(mod.getDescription())
+                    .price(mod.getPrice())
+                    .isActive(mod.getIsActive())
+                    .displayOrder(mod.getDisplayOrder())
+                    .build()).collect(Collectors.toList()))
+                .build();
+        }).collect(Collectors.toList());
+    }
+
     public List<ModifierGroup> getActiveModifierGroups() {
         return modifierGroupRepository.findByIsActiveTrue();
+    }
+
+    public List<ModifierGroupDTO> getActiveModifierGroupsDTO() {
+        List<ModifierGroup> groups = modifierGroupRepository.findByIsActiveTrue();
+        return groups.stream().map(group -> {
+            List<MenuModifier> modifiers = menuModifierRepository.findByModifierGroupId(group.getId());
+            return ModifierGroupDTO.builder()
+                .id(group.getId())
+                .name(group.getName())
+                .description(group.getDescription())
+                .isRequired(group.getIsRequired())
+                .allowMultiple(group.getAllowMultiple())
+                .minSelection(group.getMinSelection())
+                .maxSelection(group.getMaxSelection())
+                .isActive(group.getIsActive())
+                .modifiers(modifiers.stream().map(mod -> MenuModifierDTO.builder()
+                    .id(mod.getId())
+                    .name(mod.getName())
+                    .description(mod.getDescription())
+                    .price(mod.getPrice())
+                    .isActive(mod.getIsActive())
+                    .displayOrder(mod.getDisplayOrder())
+                    .build()).collect(Collectors.toList()))
+                .build();
+        }).collect(Collectors.toList());
     }
 
     public ModifierGroup createModifierGroup(ModifierGroup modifierGroup) {
@@ -59,6 +113,18 @@ public class ModifierService {
         return menuModifierRepository.findByModifierGroupId(groupId);
     }
 
+    public List<MenuModifierDTO> getModifiersByGroupDTO(UUID groupId) {
+        List<MenuModifier> modifiers = menuModifierRepository.findByModifierGroupId(groupId);
+        return modifiers.stream().map(mod -> MenuModifierDTO.builder()
+            .id(mod.getId())
+            .name(mod.getName())
+            .description(mod.getDescription())
+            .price(mod.getPrice())
+            .isActive(mod.getIsActive())
+            .displayOrder(mod.getDisplayOrder())
+            .build()).collect(Collectors.toList());
+    }
+
     public List<MenuModifier> getActiveModifiers() {
         return menuModifierRepository.findByIsActiveTrue();
     }
@@ -87,6 +153,39 @@ public class ModifierService {
     // MenuItemModifierGroup operations
     public List<MenuItemModifierGroup> getModifierGroupsForMenuItem(UUID menuItemId) {
         return menuItemModifierGroupRepository.findByMenuItemId(menuItemId);
+    }
+
+    public List<MenuItemModifierGroupDTO> getModifierGroupsForMenuItemDTO(UUID menuItemId) {
+        List<MenuItemModifierGroup> links = menuItemModifierGroupRepository.findByMenuItemId(menuItemId);
+        return links.stream().map(link -> {
+            ModifierGroup group = link.getModifierGroup();
+            List<MenuModifier> modifiers = menuModifierRepository.findByModifierGroupId(group.getId());
+            
+            ModifierGroupDTO groupDTO = ModifierGroupDTO.builder()
+                .id(group.getId())
+                .name(group.getName())
+                .description(group.getDescription())
+                .isRequired(group.getIsRequired())
+                .allowMultiple(group.getAllowMultiple())
+                .minSelection(group.getMinSelection())
+                .maxSelection(group.getMaxSelection())
+                .isActive(group.getIsActive())
+                .modifiers(modifiers.stream().map(mod -> MenuModifierDTO.builder()
+                    .id(mod.getId())
+                    .name(mod.getName())
+                    .description(mod.getDescription())
+                    .price(mod.getPrice())
+                    .isActive(mod.getIsActive())
+                    .displayOrder(mod.getDisplayOrder())
+                    .build()).collect(Collectors.toList()))
+                .build();
+            
+            return MenuItemModifierGroupDTO.builder()
+                .id(link.getId())
+                .modifierGroup(groupDTO)
+                .displayOrder(link.getDisplayOrder())
+                .build();
+        }).collect(Collectors.toList());
     }
 
     public MenuItemModifierGroup linkModifierGroupToMenuItem(MenuItem menuItem, ModifierGroup modifierGroup, Integer displayOrder) {

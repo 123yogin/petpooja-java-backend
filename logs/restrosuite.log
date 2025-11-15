@@ -412,3 +412,204 @@ This generated password is for development use only. Your security configuration
 2025-11-15 12:17:41.700 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
 2025-11-15 12:17:41.700 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
 2025-11-15 12:17:41.700 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-15 12:37:25.238 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-15 12:37:25.258 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-15 12:37:25.266 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-15 12:37:25.266 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6cd62cf9]]
+2025-11-15 12:37:25.266 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-15 12:37:25.279 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:37:25.282 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-15 12:37:25.306 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-15 12:37:48.391 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 8524 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-15 12:37:48.391 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-15 12:37:48.444 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-15 12:37:48.452 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-15 12:37:49.729 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15 12:37:49.919 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 175 ms. Found 21 JPA repository interfaces.
+2025-11-15 12:37:50.704 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-15 12:37:50.735 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-15 12:37:50.737 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15 12:37:50.835 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-15 12:37:50.835 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2383 ms
+2025-11-15 12:37:51.021 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-15 12:37:51.039 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_7YeOOqnqx/.well-known/jwks.json
+2025-11-15 12:37:51.060 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-15 12:37:51.703 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15 12:37:51.766 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-15 12:37:51.985 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4cf10a70
+2025-11-15 12:37:51.985 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-15 12:37:52.038 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-15 12:37:54.069 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:37:54.444 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-15 12:37:55.718 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15 12:37:55.768 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d4336df6-3c68-4007-a05a-733d8508313a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-15 12:37:55.779 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-15 12:37:56.235 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-15 12:37:56.652 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-15 12:37:56.718 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-15 12:37:56.718 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@287691cf]]
+2025-11-15 12:37:56.718 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-15 12:37:56.749 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-15 12:37:56.777 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 9.07 seconds (process running for 9.94)
+2025-11-15 12:37:56.863 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:37:56.863 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:37:56.863 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-15 12:37:56.863 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, menu_item_modifier_group, menu_modifier, modifier_group, order_item, order_item_modifier, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-15 12:37:56.868 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-15 12:37:56.879 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-15 12:37:56.879 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-15 12:37:56.879 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:37:56.879 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-15 12:37:56.879 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-15 12:37:56.879 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:37:56.879 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:37:56.985 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-15 12:37:56.985 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-15 12:37:56.998 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-15 12:37:56.998 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-15 12:37:57.001 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-15 12:37:57.002 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
+2025-11-15 12:37:57.004 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-15 12:37:57.004 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
+2025-11-15 12:37:57.004 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-15 12:37:57.004 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-15 12:37:57.015 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-15 12:37:57.015 [restartedMain] INFO  c.e.r.service.SeedDataService - 🔧 Seeding modifiers...
+2025-11-15 12:37:57.141 [restartedMain] INFO  c.e.r.service.SeedDataService -    ✅ Created modifier groups and modifiers
+2025-11-15 12:38:17.718 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-15 12:38:19.147 [http-nio-8080-exec-2] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:38:19.151 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:38:34.565 [http-nio-8080-exec-8] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:38:34.565 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:38:43.855 [http-nio-8080-exec-3] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:38:43.855 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:39:34.994 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-15 12:39:35.029 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-15 12:39:35.040 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-11-15 12:39:35.041 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@287691cf]]
+2025-11-15 12:39:35.045 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-11-15 12:39:35.056 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:39:35.062 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-15 12:39:35.083 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-15 12:39:49.689 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Starting RestroSuiteApplication using Java 21.0.8 with PID 56208 (C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone\target\classes started by yogin in C:\Users\yogin\OneDrive\Desktop\Java Project\petpooja-clone\backend\petpooja_clone)
+2025-11-15 12:39:49.691 [restartedMain] INFO  c.e.r.RestroSuiteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-15 12:39:49.742 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-15 12:39:49.742 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-15 12:39:51.264 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15 12:39:51.453 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 165 ms. Found 21 JPA repository interfaces.
+2025-11-15 12:39:52.314 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-15 12:39:52.331 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-15 12:39:52.331 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15 12:39:52.414 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-15 12:39:52.464 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2722 ms
+2025-11-15 12:39:52.647 [restartedMain] WARN  c.e.restrosuite.security.JwtUtil - JWT_SECRET not set, using in-memory key (NOT SECURE FOR PRODUCTION)
+2025-11-15 12:39:52.685 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Initializing Cognito JWT processor with JWK URL: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_7YeOOqnqx/.well-known/jwks.json
+2025-11-15 12:39:52.726 [restartedMain] INFO  c.e.r.security.CognitoTokenValidator - Cognito JWT processor initialized successfully
+2025-11-15 12:39:53.602 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15 12:39:53.693 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-15 12:39:54.099 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56be8d8c
+2025-11-15 12:39:54.099 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-15 12:39:54.166 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-15 12:39:56.570 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15 12:39:56.979 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-15 12:39:58.597 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15 12:39:58.650 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7b057f46-eb3b-4e47-9ef8-6d254799b4f0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-15 12:39:58.658 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-15 12:39:59.097 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2025-11-15 12:39:59.564 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-15 12:39:59.647 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-11-15 12:39:59.647 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4adc9d7a]]
+2025-11-15 12:39:59.647 [restartedMain] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-11-15 12:39:59.678 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-15 12:39:59.699 [restartedMain] INFO  c.e.r.RestroSuiteApplication - Started RestroSuiteApplication in 10.833 seconds (process running for 11.984)
+2025-11-15 12:39:59.798 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:39:59.799 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:39:59.800 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📊 DATABASE TABLES STATUS CHECK
+2025-11-15 12:39:59.800 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:39:59.811 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 📋 All tables in database: [attendance, bill, customer, discount, employee, ingredient, leave, location, menu_ingredient, menu_item, menu_item_modifier_group, menu_modifier, modifier_group, order_item, order_item_modifier, orders, outlet, payment, payroll, purchase_order, reservation, restaurant_table, supplier, task, user]
+2025-11-15 12:39:59.813 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ Found 10 existing table(s):
+2025-11-15 12:39:59.814 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'user' exists
+2025-11-15 12:39:59.814 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_item' exists
+2025-11-15 12:39:59.814 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'restaurant_table' exists
+2025-11-15 12:39:59.816 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'orders' exists
+2025-11-15 12:39:59.816 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'order_item' exists
+2025-11-15 12:39:59.816 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'bill' exists
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'ingredient' exists
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'menu_ingredient' exists
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'supplier' exists
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener -    ✓ Table 'purchase_order' exists
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ✅ SUCCESS: All 10 required tables exist!
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ℹ️  Hibernate will update schema automatically if needed (ddl-auto=update)
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - ========================================
+2025-11-15 12:39:59.817 [restartedMain] INFO  c.e.r.c.DatabaseInitializationListener - 
+2025-11-15 12:40:00.052 [restartedMain] INFO  c.e.r.service.SeedDataService - ℹ️  Database already contains data. Skipping main seed data initialization.
+2025-11-15 12:40:00.052 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏢 Seeding suppliers...
+2025-11-15 12:40:00.063 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Suppliers already exist
+2025-11-15 12:40:00.063 [restartedMain] INFO  c.e.r.service.SeedDataService - 🥘 Seeding ingredients...
+2025-11-15 12:40:00.063 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Ingredients already exist
+2025-11-15 12:40:00.063 [restartedMain] INFO  c.e.r.service.SeedDataService - 📋 Seeding tasks...
+2025-11-15 12:40:00.069 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Tasks already exist
+2025-11-15 12:40:00.069 [restartedMain] INFO  c.e.r.service.SeedDataService - 👔 Seeding employees...
+2025-11-15 12:40:00.076 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Employees already exist
+2025-11-15 12:40:00.076 [restartedMain] INFO  c.e.r.service.SeedDataService - 🏪 Seeding outlets...
+2025-11-15 12:40:00.080 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Outlets already exist
+2025-11-15 12:40:00.080 [restartedMain] INFO  c.e.r.service.SeedDataService - 🔧 Seeding modifiers...
+2025-11-15 12:40:00.086 [restartedMain] INFO  c.e.r.service.SeedDataService -    ⏭️  Modifiers already exist
+2025-11-15 12:40:04.348 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-15 12:40:09.714 [http-nio-8080-exec-7] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:40:09.721 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:40:12.654 [http-nio-8080-exec-10] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:40:12.658 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:44:35.089 [http-nio-8080-exec-10] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:44:35.091 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:44:37.772 [http-nio-8080-exec-1] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:44:37.775 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:46:40.186 [http-nio-8080-exec-1] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:46:40.188 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:46:50.589 [http-nio-8080-exec-5] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:46:50.589 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:53:54.406 [http-nio-8080-exec-8] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:53:54.416 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:54:16.194 [http-nio-8080-exec-5] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:54:16.197 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:54:22.295 [http-nio-8080-exec-4] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:54:22.301 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:54:57.140 [http-nio-8080-exec-5] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:54:57.144 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:55:05.531 [http-nio-8080-exec-4] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:55:05.533 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:55:32.265 [http-nio-8080-exec-7] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:55:32.271 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:55:39.985 [http-nio-8080-exec-3] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:55:40.090 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:56:27.113 [http-nio-8080-exec-8] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:56:27.115 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:56:43.944 [http-nio-8080-exec-2] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:56:43.948 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 12:56:46.331 [http-nio-8080-exec-10] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 12:56:46.331 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 13:00:00.012 [MessageBroker-6] INFO  c.e.r.service.ScheduledTasksService - Hourly scheduled task executed
+2025-11-15 13:00:42.600 [http-nio-8080-exec-5] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 13:00:42.600 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-11-15 13:00:44.926 [http-nio-8080-exec-8] WARN  c.e.r.config.GlobalExceptionHandler - Runtime error: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-11-15 13:00:44.926 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]

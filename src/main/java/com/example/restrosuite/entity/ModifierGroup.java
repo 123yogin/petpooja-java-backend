@@ -1,5 +1,6 @@
 package com.example.restrosuite.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -41,7 +42,8 @@ public class ModifierGroup {
     @Column(nullable = false)
     private Boolean isActive = true;
 
-    @OneToMany(mappedBy = "modifierGroup", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "modifierGroup", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JsonManagedReference
     @Builder.Default
     private List<MenuModifier> modifiers = new ArrayList<>();
 }

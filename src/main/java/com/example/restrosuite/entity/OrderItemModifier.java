@@ -1,6 +1,7 @@
 package com.example.restrosuite.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,8 +30,9 @@ public class OrderItemModifier {
     @JsonBackReference
     private OrderItem orderItem;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "menu_modifier_id", nullable = false)
+    @JsonIgnoreProperties({"modifierGroup", "hibernateLazyInitializer", "handler"})
     private MenuModifier menuModifier;
 
     @Column(nullable = false)

@@ -1,5 +1,7 @@
 package com.example.restrosuite.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,8 +22,10 @@ public class MenuModifier {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "modifier_group_id", nullable = false)
+    @JsonBackReference
+    @JsonIgnore // Additional safety to prevent serialization
     private ModifierGroup modifierGroup;
 
     @Column(nullable = false)

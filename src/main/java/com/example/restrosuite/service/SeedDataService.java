@@ -47,6 +47,15 @@ public class SeedDataService implements ApplicationListener<ApplicationReadyEven
     private OutletRepository outletRepository;
 
     @Autowired
+    private ModifierGroupRepository modifierGroupRepository;
+
+    @Autowired
+    private MenuModifierRepository menuModifierRepository;
+
+    @Autowired
+    private MenuItemModifierGroupRepository menuItemModifierGroupRepository;
+
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Override
@@ -65,17 +74,19 @@ public class SeedDataService implements ApplicationListener<ApplicationReadyEven
             seedTasks();
             seedEmployees();
             seedOutlets();
+            seedModifiers();
             logger.info("✅ Seed data initialization complete!");
             logger.info("========================================");
             logger.info("");
         } else {
             logger.info("ℹ️  Database already contains data. Skipping main seed data initialization.");
-            // Still seed suppliers, ingredients, tasks, employees, and outlets if they don't exist
+            // Still seed suppliers, ingredients, tasks, employees, outlets, and modifiers if they don't exist
             seedSuppliers();
             seedIngredients();
             seedTasks();
             seedEmployees();
             seedOutlets();
+            seedModifiers();
         }
     }
 
@@ -93,11 +104,12 @@ public class SeedDataService implements ApplicationListener<ApplicationReadyEven
         seedUsers();
         seedMenuItems();
         seedTables();
-        seedIngredients();
+            seedIngredients();
             seedSuppliers();
             seedTasks();
             seedEmployees();
             seedOutlets();
+            seedModifiers();
         logger.info("✅ Seed data initialization complete!");
         logger.info("========================================");
         logger.info("");
@@ -586,6 +598,246 @@ public class SeedDataService implements ApplicationListener<ApplicationReadyEven
             logger.info("   ✅ Created {} outlets", outlets.size());
         } else {
             logger.info("   ⏭️  Outlets already exist");
+        }
+    }
+
+    private void seedModifiers() {
+        logger.info("🔧 Seeding modifiers...");
+        
+        // Always seed modifiers if none exist
+        if (modifierGroupRepository.count() == 0) {
+            // Create modifier groups
+            ModifierGroup sizeGroup = ModifierGroup.builder()
+                .name("Size")
+                .description("Select size for your item")
+                .isRequired(true)
+                .allowMultiple(false)
+                .minSelection(1)
+                .maxSelection(1)
+                .isActive(true)
+                .build();
+            sizeGroup = modifierGroupRepository.save(sizeGroup);
+
+            ModifierGroup spiceLevelGroup = ModifierGroup.builder()
+                .name("Spice Level")
+                .description("Choose your preferred spice level")
+                .isRequired(false)
+                .allowMultiple(false)
+                .minSelection(0)
+                .maxSelection(1)
+                .isActive(true)
+                .build();
+            spiceLevelGroup = modifierGroupRepository.save(spiceLevelGroup);
+
+            ModifierGroup toppingsGroup = ModifierGroup.builder()
+                .name("Toppings")
+                .description("Add extra toppings")
+                .isRequired(false)
+                .allowMultiple(true)
+                .minSelection(0)
+                .maxSelection(null)
+                .isActive(true)
+                .build();
+            toppingsGroup = modifierGroupRepository.save(toppingsGroup);
+
+            ModifierGroup breadTypeGroup = ModifierGroup.builder()
+                .name("Bread Type")
+                .description("Select bread type")
+                .isRequired(false)
+                .allowMultiple(false)
+                .minSelection(0)
+                .maxSelection(1)
+                .isActive(true)
+                .build();
+            breadTypeGroup = modifierGroupRepository.save(breadTypeGroup);
+
+            // Create modifiers for Size group
+            List<MenuModifier> sizeModifiers = List.of(
+                MenuModifier.builder()
+                    .modifierGroup(sizeGroup)
+                    .name("Small")
+                    .description("Regular size")
+                    .price(0.0)
+                    .isActive(true)
+                    .displayOrder(1)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(sizeGroup)
+                    .name("Medium")
+                    .description("Medium size")
+                    .price(30.0)
+                    .isActive(true)
+                    .displayOrder(2)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(sizeGroup)
+                    .name("Large")
+                    .description("Large size")
+                    .price(60.0)
+                    .isActive(true)
+                    .displayOrder(3)
+                    .build()
+            );
+            menuModifierRepository.saveAll(sizeModifiers);
+
+            // Create modifiers for Spice Level group
+            List<MenuModifier> spiceModifiers = List.of(
+                MenuModifier.builder()
+                    .modifierGroup(spiceLevelGroup)
+                    .name("Mild")
+                    .description("Mild spice")
+                    .price(0.0)
+                    .isActive(true)
+                    .displayOrder(1)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(spiceLevelGroup)
+                    .name("Medium")
+                    .description("Medium spice")
+                    .price(0.0)
+                    .isActive(true)
+                    .displayOrder(2)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(spiceLevelGroup)
+                    .name("Spicy")
+                    .description("Spicy")
+                    .price(0.0)
+                    .isActive(true)
+                    .displayOrder(3)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(spiceLevelGroup)
+                    .name("Extra Spicy")
+                    .description("Very spicy")
+                    .price(0.0)
+                    .isActive(true)
+                    .displayOrder(4)
+                    .build()
+            );
+            menuModifierRepository.saveAll(spiceModifiers);
+
+            // Create modifiers for Toppings group
+            List<MenuModifier> toppingModifiers = List.of(
+                MenuModifier.builder()
+                    .modifierGroup(toppingsGroup)
+                    .name("Extra Cheese")
+                    .description("Add extra cheese")
+                    .price(30.0)
+                    .isActive(true)
+                    .displayOrder(1)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(toppingsGroup)
+                    .name("Extra Onions")
+                    .description("Add extra onions")
+                    .price(10.0)
+                    .isActive(true)
+                    .displayOrder(2)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(toppingsGroup)
+                    .name("Extra Tomatoes")
+                    .description("Add extra tomatoes")
+                    .price(10.0)
+                    .isActive(true)
+                    .displayOrder(3)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(toppingsGroup)
+                    .name("Extra Butter")
+                    .description("Add extra butter")
+                    .price(20.0)
+                    .isActive(true)
+                    .displayOrder(4)
+                    .build()
+            );
+            menuModifierRepository.saveAll(toppingModifiers);
+
+            // Create modifiers for Bread Type group
+            List<MenuModifier> breadModifiers = List.of(
+                MenuModifier.builder()
+                    .modifierGroup(breadTypeGroup)
+                    .name("Plain Naan")
+                    .description("Regular naan")
+                    .price(0.0)
+                    .isActive(true)
+                    .displayOrder(1)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(breadTypeGroup)
+                    .name("Butter Naan")
+                    .description("Butter naan")
+                    .price(10.0)
+                    .isActive(true)
+                    .displayOrder(2)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(breadTypeGroup)
+                    .name("Garlic Naan")
+                    .description("Garlic naan")
+                    .price(20.0)
+                    .isActive(true)
+                    .displayOrder(3)
+                    .build(),
+                MenuModifier.builder()
+                    .modifierGroup(breadTypeGroup)
+                    .name("Roti")
+                    .description("Plain roti")
+                    .price(0.0)
+                    .isActive(true)
+                    .displayOrder(4)
+                    .build()
+            );
+            menuModifierRepository.saveAll(breadModifiers);
+
+            // Link modifier groups to some menu items
+            List<MenuItem> allMenuItems = menuItemRepository.findAll();
+            
+            // Link Size and Spice Level to main course items
+            for (MenuItem item : allMenuItems) {
+                if ("Main Course".equals(item.getCategory())) {
+                    // Link Size group
+                    MenuItemModifierGroup link1 = MenuItemModifierGroup.builder()
+                        .menuItem(item)
+                        .modifierGroup(sizeGroup)
+                        .displayOrder(1)
+                        .build();
+                    menuItemModifierGroupRepository.save(link1);
+                    
+                    // Link Spice Level group
+                    MenuItemModifierGroup link2 = MenuItemModifierGroup.builder()
+                        .menuItem(item)
+                        .modifierGroup(spiceLevelGroup)
+                        .displayOrder(2)
+                        .build();
+                    menuItemModifierGroupRepository.save(link2);
+                    
+                    // Link Toppings group
+                    MenuItemModifierGroup link3 = MenuItemModifierGroup.builder()
+                        .menuItem(item)
+                        .modifierGroup(toppingsGroup)
+                        .displayOrder(3)
+                        .build();
+                    menuItemModifierGroupRepository.save(link3);
+                }
+            }
+            
+            // Link Bread Type to bread items
+            for (MenuItem item : allMenuItems) {
+                if ("Bread".equals(item.getCategory())) {
+                    MenuItemModifierGroup link = MenuItemModifierGroup.builder()
+                        .menuItem(item)
+                        .modifierGroup(breadTypeGroup)
+                        .displayOrder(1)
+                        .build();
+                    menuItemModifierGroupRepository.save(link);
+                }
+            }
+
+            logger.info("   ✅ Created modifier groups and modifiers");
+        } else {
+            logger.info("   ⏭️  Modifiers already exist");
         }
     }
 }

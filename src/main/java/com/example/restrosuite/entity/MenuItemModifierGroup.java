@@ -1,5 +1,6 @@
 package com.example.restrosuite.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,10 +27,12 @@ public class MenuItemModifierGroup {
 
     @ManyToOne
     @JoinColumn(name = "menu_item_id", nullable = false)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private MenuItem menuItem;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "modifier_group_id", nullable = false)
+    @JsonIgnoreProperties({"modifiers", "hibernateLazyInitializer", "handler"}) // Prevent circular reference
     private ModifierGroup modifierGroup;
 
     private Integer displayOrder; // Order in which modifier groups appear for this menu item
